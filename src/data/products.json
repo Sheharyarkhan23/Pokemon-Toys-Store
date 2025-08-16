@@ -1,0 +1,1000 @@
+[
+  {
+    "id": "1",
+    "name": "Pokemon TCG: Sword & Shield - Darkness Ablaze Booster Box - 36 Packs",
+    "price": 249.99,
+    "image": "https://myshopville.com/cdn/shop/products/pokemontradingcardgameswordandshielddarknessablaze36packboosterboxcardgameboxcover.jpg",
+    "set": "Scarlet & Violet",
+    "category": "Booster Boxes",
+    "isHot": true,
+    "originalPrice": 269.99
+  },
+  {
+    "id": "2",
+    "name": "Pokemon TCG: Sword & Shield - Time Gazer Booster Box - Japanese - 30 Packs",
+    "price": 69.99,
+    "image": "https://myshopville.com/cdn/shop/products/pokemontcgswordandshieldtimegazerboosterboxjapanese30packstradingcardgameboxcover.jpg",
+    "set": "Vmax Climax",
+    "category": "Japanese Sets",
+    "isHot": true,
+    "originalPrice": 89.99
+  },
+  {
+    "id": "3",
+    "name": "Pokemon TCG: Scarlet & Violet - Destined Rivals Booster Box - 36 Packs",
+    "price": 199.99,
+    "image": "https://myshopville.com/cdn/shop/files/pokemon-tcg-scarlet-and-violet-Destined-Rivals-Booster-Box-box-cover_1_1dd9bc6c-975a-4f1b-921d-be86a9983826.jpg",
+    "set": "Darkness Ablaze",
+    "category": "Special Collections",
+    "originalPrice": 219.99
+  },
+  {
+    "id": "4",
+    "name": "Pokemon TCG: Scarlet & Violet - Expansion Pack Black Bolt Booster Box [JPN] - 20 Packs",
+    "price": 99.99,
+    "image": "https://myshopville.com/cdn/shop/products/pokemontcgswordandshieldfusionstrikeboosterdisplaybox36packstradingcardgameboxcover.jpg",
+    "set": "Rebel Clash",
+    "category": "Booster Boxes",
+    "originalPrice": 119.99
+  },
+  {
+    "id": "5",
+    "name": "Pokemon TCG: Scarlet & Violet Booster Box - 36 Packs",
+    "price": 249.99,
+    "image": "https://myshopville.com/cdn/shop/files/pokemontcgscarletandvioletboosterdisaplybox36packstradingcardgameboxcover_4158ea5a-7e3d-4952-a07e-edfe155e7ebd.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 269.99
+  },
+  {
+    "id": "6",
+    "name": "Pokemon TCG Sun & Moon Booster Box - 36 Packs",
+    "price": 479.99,
+    "image": "https://myshopville.com/cdn/shop/products/pokemon_tcg_sun_moon_booster_box_card_game_shopville.png",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 499.99
+  },
+  {
+    "id": "7",
+    "name": "Pokemon TCG: Sword & Shield - Lost Origin Booster Box - 36 Packs",
+    "price": 479.99,
+    "image": "https://myshopville.com/cdn/shop/files/pokemontcgswordandshieldlostoriginboosterdisplaybox36packstradingcardgameboxcover_cbb7cb5d-7e3a-4363-959b-f7c48df04cba.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isHot": true,
+    "originalPrice": 499.99
+  },
+  {
+    "id": "8",
+    "name": "Pokemon TCG: Crown Zenith Elite Trainer Box",
+    "price": 139.99,
+    "image": "https://myshopville.com/cdn/shop/files/pokemontcgcrownzenithelitetrainerboxtradingcardgameboxcover_7ede7b31-bbbb-4ee2-898b-695a340c20e3.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 159.99
+  },
+  {
+    "id": "9",
+    "name": "Pokemon TCG: Scarlet & Violet - Heat Wave Arena Booster Box (JPN)-30packs",
+    "price": 29.99,
+    "image": "https://myshopville.com/cdn/shop/files/pokemon-tcg-scarlet-and-violet-heat-wave-arena-booster-box-jpn-30-packs-box-cover.jpg?v=1750113589&width=800",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 49.99
+  },
+  {
+    "id": "10",
+    "name": "Pokemon TCG: Sword & Shield - Enhanced Expansion Pack Pokemon GO Booster Box [JPN] - 20 Packs",
+    "price": 19.99,
+    "image": "https://myshopville.com/cdn/shop/products/pokemontcgswordandshieldpokemongoboosterboxjapanese20packstradingcardgameboxcover.jpg?v=1671495739&width=800",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 39.99
+  },
+  {
+    "id": "11",
+    "name": "Pokemon TCG: Scarlet & Violet - Battle Partners Booster Box (JPN) - 30 Packs",
+    "price": 29.99,
+    "image": "https://myshopville.com/cdn/shop/files/pokemon-tcg-scarlet-and-violet-battle-partners-booster-box-jpn-30-packs-box-cover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 49.99
+  },
+  {
+    "id": "12",
+    "name": "Pokemon TCG: Sword & Shield SWORD V Booster Box [KOR] - 30 Packs",
+    "price": 9.99,
+    "image": "https://myshopville.com/cdn/shop/files/pokemon-tcg-sword-and-shield-sword-v-korean-box-cover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 29.99
+  },
+  {
+    "id": "13",
+    "name": "Pokemon TCG: Scarlet & Violet - Paldea Evolved Booster Box - 36 Packs",
+    "price": 249.99,
+    "image": "https://myshopville.com/cdn/shop/files/pokemontcgscarletandvioletpaldeaevolvedboosterdisplayboxtradingcardgameboxcover_472ae596-5671-4286-acff-0280813daff0.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 269.99
+  },
+  {
+    "id": "14",
+    "name": "Pokemon TCG: Scarlet & Violet - Stellar Crown Booster Box - 36 Packs",
+    "price": 149.99,
+    "image": "https://myshopville.com/cdn/shop/files/pokemon-tcg-scarlet-and-violet-stellar-crown-booster-box-display-box-cover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 169.99
+  },
+  {
+    "id": "15",
+    "name": "Pokemon TCG: Sword & Shield - Astral Radiance Booster Box - 36 Packs",
+    "price": 329.99,
+    "image": "https://myshopville.com/cdn/shop/products/pokemontcgswordandshieldastralradianceboosterdisplaybox36packstradingcardgameboxcover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 349.99
+  },
+  {
+    "id": "16",
+    "name": "Pokemon TCG: Scarlet and Violet - Journey Together Booster Display Box - 36 Packs",
+    "price": 149.99,
+    "image": "https://myshopville.com/cdn/shop/files/Pokemon-TCG-Scarlet-and-Violet-Journey-Together-Booster-Display-Box-36-Packs-Cover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 169.99
+  },
+  {
+    "id": "17",
+    "name": "Pokemon TCG: Scarlet & Violet - Surging Sparks Booster Box - 36 Packs",
+    "price": 149.99,
+    "image": "https://myshopville.com/cdn/shop/files/818cL_h8s0L._AC_SL1500.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 169.99
+  },
+  {
+    "id": "18",
+    "name": "Pokemon TCG: Scarlet & Violet - Twilight Masquerade Booster Box - 36 Packs",
+    "price": 179.99,
+    "image": "https://myshopville.com/cdn/shop/files/pokemontcgtwilightmasqueradeBoosterdisplayboxcover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 199.99
+  },
+  {
+    "id": "19",
+    "name": "Pokemon TCG: Scarlet & Violet 151 Booster Box [JPN] - 20 Packs",
+    "price": 99.99,
+    "image": "https://myshopville.com/cdn/shop/files/Pokemon-TCG-Scarlet-and-Violet-Pokemon-Card-151-SV2a-Booster-Box-cover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 119.99
+  },
+  {
+    "id": "20",
+    "name": "Pokemon TCG: Scarlet & Violet - Journey Together Enhanced Booster Box - 36 Packs + PROMO!",
+    "price": 139.99,
+    "image": "https://myshopville.com/cdn/shop/files/pokemon-tcg-Journey-Together-Booster-box-box-cover_d23dca1c-e7db-4f0d-821b-5adc61c7a0dd.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 159.99
+  },
+  {
+    "id": "21",
+    "name": "Pokemon TCG: Sword & Shield - Silver Tempest Booster Box - 36 Packs",
+    "price": 249.99,
+    "image": "https://myshopville.com/cdn/shop/files/61AQfw12hSL._AC.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 269.99
+  },
+  {
+    "id": "22",
+    "name": "Pokemon TCG: Scarlet & Violet - Black Bolt Elite Trainer Box",
+    "price": 39.99,
+    "image": "https://myshopville.com/cdn/shop/files/pokemon-tcg-scarlet-and-violet-black-bolt-elite-trainer--box-cover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 59.99
+  },
+  {
+    "id": "23",
+    "name": "Pokemon TCG: Scarlet & Violet - White Flare Elite Trainer Box",
+    "price": 39.99,
+    "image": "https://myshopville.com/cdn/shop/files/pokemon-tcg-scarlet-and-violet-white-flare-elite-trainer--box-cover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 59.99
+  },
+  {
+    "id": "24",
+    "name": "Pokemon TCG: Mega Evolution - Base Set Build & Battle Box",
+    "price": 9.99,
+    "image": "https://myshopville.com/cdn/shop/files/pokemon-tcg-mega-evolution-base-set-build-and-battle-box-cover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 29.99
+  },
+  {
+    "id": "25",
+    "name": "Pokemon TCG: Trainers Toolkit 2022",
+    "price": 29.99,
+    "image": "https://myshopville.com/cdn/shop/products/pokemontcgtrainerstoolkit2022tradingcardgameboxcover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 49.99
+  },
+  {
+    "id": "26",
+    "name": "Pokemon TCG: Trainers Toolkit 2023 (Arceus)",
+    "price": 9.99,
+    "image": "https://myshopville.com/cdn/shop/files/pokemontcgtrainerstoolkit2023tradingcardgameboxcover_5e36c563-2273-45b2-81af-b2a9ee16f76e.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 29.99
+  },
+  {
+    "id": "27",
+    "name": "Pokemon TCG: Pokemon GO V Battle Deck - Mewtwo vs. Melmetal",
+    "price": 19.99,
+    "image": "https://myshopville.com/cdn/shop/products/pokemontcgpokemongovbattledeckmewtwovsmelmetaltradingcardgameboxcover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 19.99
+  },
+  {
+    "id": "28",
+    "name": "Pokemon TCG: Scarlet EX & Violet EX Promo Pack [JPN]",
+    "price": -0.01,
+    "image": "https://myshopville.com/cdn/shop/files/pokemontcgscarletexandvioletexpromopackjapanesetradingcardgamecasecover_0a9eaeb2-8baf-4b9f-98e1-41e90ff4ba11.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": -0.01
+  },
+  {
+    "id": "29",
+    "name": "Pokemon TCG: Sword & Shield - Paradigm Trigger - Promotional Pack (Lugia Get Challenge 2022) [JPN]",
+    "price": 9.99,
+    "image": "https://myshopville.com/cdn/shop/products/pokemontcgswordandshieldparadigmtriggerpromotionalpackluigagetchallenge2022japanesetradingcardgameboxcover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 9.99
+  },
+  {
+    "id": "30",
+    "name": "Pokemon TCG: Sword & Shield - Brilliant Stars Booster Display Box - 36 Packs",
+    "price": 329.99,
+    "image": "https://myshopville.com/cdn/shop/products/pokemontcgswordandshieldbrilliantstarsboosterdisplaybox36packstradingcardgameboxcover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 349.99
+  },
+  {
+    "id": "31",
+    "name": "Pokemon TCG: XY Evolutions Booster Box - 36 Packs",
+    "price": 1349.99,
+    "image": "https://myshopville.com/cdn/shop/files/71dq3ZSqpWL._AC_SL1001.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 1369.99
+  },
+  {
+    "id": "32",
+    "name": "Pokemon TCG: Scarlet and Violet - Temporal Forces Booster Display Box - 36 Packs",
+    "price": 139.99,
+    "image": "https://myshopville.com/cdn/shop/files/pokemontcgtemporalforcesdisplayboosterbox36packscover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 159.99
+  },
+  {
+    "id": "33",
+    "name": "Pokemon TCG: Scarlet & Violet Wild Force Booster Box [KOR] - 30 Packs",
+    "price": 9.99,
+    "image": "https://myshopville.com/cdn/shop/files/pokemon-tcg-scarlet-and-violet-wild-force-booster-box-box-cover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 29.99
+  },
+  {
+    "id": "34",
+    "name": "Pokemon TCG: Sword & Shield - Battle Styles Booster Box - 36 Packs",
+    "price": 149.99,
+    "image": "https://myshopville.com/cdn/shop/products/pokemontcgswordandshieldbattlestylesboosterdisplayboxtradingcardgameboxcover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 169.99
+  },
+  {
+    "id": "35",
+    "name": "Pokemon TCG: Pokemon GO Pokemon Center Elite Trainer Box Plus",
+    "price": 79.99,
+    "image": "https://myshopville.com/cdn/shop/products/pokemontcgpokemongopokemoncentreelitetrainerboxplustradingcardgameboxcover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 99.99
+  },
+  {
+    "id": "36",
+    "name": "Pokemon TCG: Sword & Shield - Fusion Strike Booster Box - 36 Packs",
+    "price": 729.99,
+    "image": "https://myshopville.com/cdn/shop/products/pokemontcgswordandshieldfusionstrikeboosterdisplaybox36packstradingcardgameboxcover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 749.99
+  },
+  {
+    "id": "37",
+    "name": "Pokemon TCG: Scarlet & Violet- Obsidian Flames Booster Box - 36 Packs",
+    "price": 249.99,
+    "image": "https://myshopville.com/cdn/shop/files/pokemontcgscartletandvioletobsidianflamesboosterdisplayboxtradingcardgameboxcover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 269.99
+  },
+  {
+    "id": "38",
+    "name": "Pokemon TCG: Sword & Shield - Fusion Arts Booster Box [JPN] - 30 Packs",
+    "price": 119.99,
+    "image": "https://myshopville.com/cdn/shop/products/pokemontcgswordandshieldfusionartsboosterboxjapanese30packstradingcardgameboxcover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 139.99
+  },
+  {
+    "id": "39",
+    "name": "Pokemon TCG: Scarlet & Violet Snow Hazard Booster Box [JPN] - 30 Packs",
+    "price": 29.99,
+    "image": "https://myshopville.com/cdn/shop/files/pokemonscarletandvioletsnowhazardboosterbox30packsjapanesetradingcardgameboxcover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 49.99
+  },
+  {
+    "id": "40",
+    "name": "Pokemon TCG: Sword & Shield Space Juggler Booster Box [JPN] - 30 Packs",
+    "price": 49.99,
+    "image": "https://myshopville.com/cdn/shop/products/pokemontcgswordandshieldspacejuggerboosterboxjapanese30packstradingcardgameboxcover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 69.99
+  },
+  {
+    "id": "41",
+    "name": "Pokemon TCG: Scarlet & Violet - Paradox Rift Booster Display Box - 36 Packs",
+    "price": 149.99,
+    "image": "https://myshopville.com/cdn/shop/files/pokemonparadoxriftboosterdisplaybox_3.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 169.99
+  },
+  {
+    "id": "42",
+    "name": "Pokemon TCG: Mimikyu EX Box",
+    "price": 19.99,
+    "image": "https://myshopville.com/cdn/shop/files/pokemontcgmimikyuexboxtradingcardgameboxcover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 39.99
+  },
+  {
+    "id": "43",
+    "name": "Pokemon TCG: Hop's Zacian ex Box",
+    "price": 19.99,
+    "image": "https://myshopville.com/cdn/shop/files/pokemon-tcg-hops-zacian-ex-box-cover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 19.99
+  },
+  {
+    "id": "45",
+    "name": "Pokemon TCG: Scarlet & Violet Mask of Change Booster Box [KOR] - 30 Packs",
+    "price": 9.99,
+    "image": "https://myshopville.com/cdn/shop/files/pokemon-tcg-scarlet-and-violet-mask-of-change-booster-box-korean-box-cover_3.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 29.99
+  },
+  {
+    "id": "46",
+    "name": "Pokemon TCG: Sword & Shield Paradigm Trigger Booster Box [JPN] - 30 Packs",
+    "price": 49.99,
+    "image": "https://myshopville.com/cdn/shop/products/pokemontcgswordandshieldparadigmtriggerboosterbox30packstradingcardgameboxcover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 69.99
+  },
+  {
+    "id": "47",
+    "name": "Pokemon TCG: Sword & Shield VMAX Rising Booster Box [KOR] - 30 Packs",
+    "price": 49.99,
+    "image": "https://myshopville.com/cdn/shop/products/pokemontcgswordandshieldvmaxrisingboosterbox30packskoreantradingcardgameboxcover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 69.99
+  },
+  {
+    "id": "48",
+    "name": "Pokemon TCG: Sword & Shield Chilling Reign Booster Box - 36 Packs",
+    "price": 379.99,
+    "image": "https://myshopville.com/cdn/shop/files/Pokemon-Sword-and-Shield-Chilling-Reign-Booster-Box-Cover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 399.99
+  },
+  {
+    "id": "49",
+    "name": "Pokemon TCG: Trainers Toolkit Box (2021)",
+    "price": 19.99,
+    "image": "https://myshopville.com/cdn/shop/products/pokemontcgtrainerstoolkit2021tradingcardgameboxcover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 19.99
+  },
+  {
+    "id": "50",
+    "name": "Pokemon TCG: Houndstone Ex Collection Box",
+    "price": 9.99,
+    "image": "https://myshopville.com/cdn/shop/files/81FCHcxWI3L._AC_SL1500.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 29.99
+  },
+  {
+    "id": "51",
+    "name": "Pokemon TCG: Scarlet & Violet - Surging Sparks Build & Battle Box",
+    "price": 9.99,
+    "image": "https://myshopville.com/cdn/shop/files/Pokemon-TCG-Scarlet-Violet-Surging-Sparks-Build-Battle-Box-cover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 29.99
+  },
+  {
+    "id": "52",
+    "name": "Pokemon TCG: Scarlet & Violet - Triple Beat Booster Box (JPN) - 30 Packs",
+    "price": 39.99,
+    "image": "https://myshopville.com/cdn/shop/files/pokemon-tcg-scarlet-and-violet-triple-beat-booster-box-jpn-30-packs-box-cover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 59.99
+  },
+  {
+    "id": "53",
+    "name": "Pokemon TCG: Sword and Shield Astonishing Volt Tackle Booster Box (JPN) - 30 Packs",
+    "price": 109.99,
+    "image": "https://myshopville.com/cdn/shop/files/pokemon-tcg-sword-and-shield-astonishing-volt-tackle-booster-box-jpn-box-cover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 129.99
+  },
+  {
+    "id": "54",
+    "name": "Pokemon TCG: Sword & Shield - Silver Lance Booster Box (JPN) - 30 Packs",
+    "price": 49.99,
+    "image": "https://myshopville.com/cdn/shop/files/pokemon-tcg-sword-and-shield-silver-lance-booster-box-jpn-30-packs-box-cover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 69.99
+  },
+  {
+    "id": "55",
+    "name": "Pokemon TCG: Scarlet & Violet Expansion Pack Scarlet ex Booster Box [JPN] - 30 Packs",
+    "price": 39.99,
+    "image": "https://myshopville.com/cdn/shop/products/pokemontcgscarletandvioletexpansionpackscarletexboosterbox30packsjapanesetradingcardgameboxcover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 59.99
+  },
+  {
+    "id": "56",
+    "name": "Pokemon TCG: Scarlet & Violet Expansion Pack Violet ex Booster Box [JPN] - 30 Packs",
+    "price": 29.99,
+    "image": "https://myshopville.com/cdn/shop/products/pokemontcgscarletandvioletexpansionpackvioletexboosterbox30packsjapanesetradingcardgameboxcover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 49.99
+  },
+  {
+    "id": "57",
+    "name": "Pokemon TCG: Scarlet and Violet - Paldean Fates Pokemon Center Elite Trainer Box",
+    "price": 209.99,
+    "image": "https://myshopville.com/cdn/shop/files/pokemon-tcg-scarlet-_-violet-paldean-fates-pokemon-center-elite-trainer-box-cover_1.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 229.99
+  },
+  {
+    "id": "58",
+    "name": "Pokemon TCG: Sword & Shield - Vivid Voltage Booster Box - 36 Packs",
+    "price": 179.99,
+    "image": "https://myshopville.com/cdn/shop/products/pokemontcgtradingcardgameswordandshieldvividvoltageboxcover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 199.99
+  },
+  {
+    "id": "59",
+    "name": "Pokemon TCG: Sword and Shield - Astonishing Volt Tackle Booster Box [KOR] - 30 Packs",
+    "price": 49.99,
+    "image": "https://myshopville.com/cdn/shop/files/pokemontcgswordandshieldastonishingvolttackleboosterboxkoreantradingcardgameboxcover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 69.99
+  },
+  {
+    "id": "60",
+    "name": "Pokemon TCG: Sword & Shield High Class Pack VSTAR Universe Booster Box [JPN] - 10 Packs",
+    "price": 79.99,
+    "image": "https://myshopville.com/cdn/shop/products/pokemontcgswordandshieldhighclasspackvstaruniverseboosterboxjapanese10packstradingcardgameboxcover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 99.99
+  },
+  {
+    "id": "61",
+    "name": "Pokemon TCG: Scarlet & Violet - Surging Sparks Elite Trainer Box",
+    "price": 59.99,
+    "image": "https://myshopville.com/cdn/shop/files/pokemon-tcg-scarlet-and-violet-surging-sparks-elite-trainer-box-box-cover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 79.99
+  },
+  {
+    "id": "62",
+    "name": "Pokemon TCG: Sword & Shield - Silver Tempest Build & Battle Box",
+    "price": 9.99,
+    "image": "https://myshopville.com/cdn/shop/files/81hIOvli3IL._AC_SL1500.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 29.99
+  },
+  {
+    "id": "63",
+    "name": "Pokemon TCG: Pikachu V Box",
+    "price": 9.99,
+    "image": "https://myshopville.com/cdn/shop/products/pokemontcgpikachuvboxtradingcardgameboxcover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 29.99
+  },
+  {
+    "id": "64",
+    "name": "Pokemon TCG: Annihilape Ex Box",
+    "price": 19.99,
+    "image": "https://myshopville.com/cdn/shop/files/pokemontcgannihilapeexboxcover_bd44946b-ee5f-4b80-8b3e-c631cf63d498.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 19.99
+  },
+  {
+    "id": "65",
+    "name": "Pokemon: Sword & Shield Enhanced Expansion Pack Incandescent Arcana Booster Box [JPN] - 20 Packs",
+    "price": 49.99,
+    "image": "https://myshopville.com/cdn/shop/files/Pokemon-Sword-and-Shield-Enhanced-Expansion-Pack-Incandescent-Arcana-Box-Cover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 69.99
+  },
+  {
+    "id": "66",
+    "name": "Pokemon TCG: Scarlet & Violet - Expansion Pack White Flare Booster Box [JPN] - 20 Packs",
+    "price": 99.99,
+    "image": "https://myshopville.com/cdn/shop/files/pokemon-tcg-scarlet-and-vilet-expansion-pack-white-flare-booster-box-JPN-box-cover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 119.99
+  },
+  {
+    "id": "67",
+    "name": "Pokemon TCG: Scarlet & Violet - The Glory of Team Rocket Booster Box (JPN) - 30 Packs",
+    "price": 59.99,
+    "image": "https://myshopville.com/cdn/shop/files/pokemon-tcg-scarlet-and-violet-the-glory-of-team-rocket-booster-box-jpn-30-packs-box-cover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 79.99
+  },
+  {
+    "id": "68",
+    "name": "Pokemon TCG: Grafaiai EX Box",
+    "price": 19.99,
+    "image": "https://myshopville.com/cdn/shop/files/pokemontcggrafafaiexboxcover_f2f06f85-65c4-43fe-b3c1-1931eb979a6a.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 19.99
+  },
+  {
+    "id": "69",
+    "name": "Pokemon TCG: Mabosstiff EX Box",
+    "price": 19.99,
+    "image": "https://myshopville.com/cdn/shop/files/71OOj5WXMFL._AC_SL1500.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 19.99
+  },
+  {
+    "id": "70",
+    "name": "Pokemon TCG: Scarlet & Violet - Shrouded Fable Elite Trainer Box",
+    "price": 49.99,
+    "image": "https://myshopville.com/cdn/shop/files/91xFLmibUYL._AC_SL1500.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 69.99
+  },
+  {
+    "id": "71",
+    "name": "Pokemon TCG: Sword & Shield - Jet Black Spirit Booster Box (JPN) - 30 Packs",
+    "price": 69.99,
+    "image": "https://myshopville.com/cdn/shop/files/pokemon-tcg-sword-and-shield-jet-black-spirit-booster-box-jpn-30-packs-box-cover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 89.99
+  },
+  {
+    "id": "72",
+    "name": "Pokemon TCG: Sword & Shield High Class Pack VMAX Climax Booster Box [JPN] - 10 Packs",
+    "price": 99.99,
+    "image": "https://myshopville.com/cdn/shop/products/pokemontcgswordandshieldhighclasspackvmaxclimaxboosterbox10packsjapanesetradingcardgameboxcover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 119.99
+  },
+  {
+    "id": "73",
+    "name": "Pokemon TCG: Crown Zenith Premium Playmat Collection Box - Morpeko V-Union",
+    "price": 29.99,
+    "image": "https://myshopville.com/cdn/shop/files/pokemontcgcrownzenithpremiumplaymatcollectionmorpekovuniontradingcardgameboxcover_09d5ae29-2f40-40d5-9217-2621cd59d414.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 49.99
+  },
+  {
+    "id": "74",
+    "name": "Pokemon TCG: Scarlet & Violet Shiny Treasure EX High Class Booster Box [KOR] - 10 Packs",
+    "price": 19.99,
+    "image": "https://myshopville.com/cdn/shop/files/61Bn4zgBAgL._AC.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 39.99
+  },
+  {
+    "id": "75",
+    "name": "Pokemon TCG: Shadow Rider Calyrex V Box",
+    "price": 9.99,
+    "image": "https://myshopville.com/cdn/shop/products/pokemontcgshadowridercalyrexvboxtradingcardgameboxcover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 29.99
+  },
+  {
+    "id": "76",
+    "name": "Pokemon TCG: Iron Valiant Ex Box",
+    "price": 19.99,
+    "image": "https://myshopville.com/cdn/shop/files/pokeontcgironvaliantexboxcover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 19.99
+  },
+  {
+    "id": "77",
+    "name": "Pokemon TCG: Roaring Moon Ex Box",
+    "price": 9.99,
+    "image": "https://myshopville.com/cdn/shop/files/pokemontcgroaringmoonexbox_4.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 29.99
+  },
+  {
+    "id": "78",
+    "name": "Pokemon TCG: Sword & Shield Pokemon GO Elite Trainer Box",
+    "price": 39.99,
+    "image": "https://myshopville.com/cdn/shop/files/pokemontcgpokemongoelitetrainerboxtradingcardgameboxcover_0e605e7e-7fe2-4a4b-b23e-72cc1e3b14c0.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 59.99
+  },
+  {
+    "id": "79",
+    "name": "Pokemon TCG: Shining Legends Elite Trainer Box",
+    "price": 399.99,
+    "image": "https://myshopville.com/cdn/shop/products/pokemon_trading_card_game_tcg_shining_legends_elite_trainer_box_cover_shopville_canada_usa.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 419.99
+  },
+  {
+    "id": "80",
+    "name": "Pokemon TCG: Scarlet & Violet Pokemon Center Elite Trainer Box - Koraidon",
+    "price": 149.99,
+    "image": "https://myshopville.com/cdn/shop/files/pokemontcgscarleyandvioletpokemoncenterelitetrainerboxkoraidontradingcardgameboxcover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 169.99
+  },
+  {
+    "id": "81",
+    "name": "Pokemon TCG: Kanto Power Mini Tin Display Box - 10 Mini Tins",
+    "price": 149.99,
+    "image": "https://myshopville.com/cdn/shop/files/Pokemon-TCG-Kanto-Power-Mini-Tin-Display-Box-10-Mini-Tins-Cover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 169.99
+  },
+  {
+    "id": "82",
+    "name": "Pokemon TCG: Infernape V Box",
+    "price": 19.99,
+    "image": "https://myshopville.com/cdn/shop/products/pokemontcginfernapevboxtradingcardgameboxcover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 39.99
+  },
+  {
+    "id": "83",
+    "name": "Pokemon TCG: Hisuian Electrode V Box",
+    "price": 9.99,
+    "image": "https://myshopville.com/cdn/shop/files/916nFu2KbTL._AC_SL1500.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 29.99
+  },
+  {
+    "id": "84",
+    "name": "Pokemon TCG: Scarlet & Violet - Prismatic Evolutions Surprise Box",
+    "price": 19.99,
+    "image": "https://myshopville.com/cdn/shop/files/pokemon-tcg-scarlet-and-violet-prismatic-evolutions-surprise-box-box-cover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 39.99
+  },
+  {
+    "id": "85",
+    "name": "Pokemon TCG: Sword & Shield - Astral Radiance Elite Trainer Box",
+    "price": 79.99,
+    "image": "https://myshopville.com/cdn/shop/products/pokemontcgswordandshieldastralradianceelitetrainerboxtradingcardgameboxcover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 99.99
+  },
+  {
+    "id": "86",
+    "name": "Pokemon TCG: Scarlet & Violet - Paldea Evolved Elite Trainer Box",
+    "price": 59.99,
+    "image": "https://myshopville.com/cdn/shop/files/pokemontcgscarletandvioletpaldeaevolvedelitetrainerboxtradingcardgameboxcover_5f1dfbdf-8258-4fe4-8f38-6d64421bd47d.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 79.99
+  },
+  {
+    "id": "87",
+    "name": "Pokemon TCG: Zeraora VMAX & VSTAR Battle Box",
+    "price": 19.99,
+    "image": "https://myshopville.com/cdn/shop/products/pokemontcgzeraoravmaxandvstarbattleboxtradingcardgameboxcover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 39.99
+  },
+  {
+    "id": "88",
+    "name": "Pokemon TCG: Scarlet & Violet - Stellar Crown Build & Battle Box",
+    "price": 9.99,
+    "image": "https://myshopville.com/cdn/shop/files/81rZS3AhTbL._AC_SL1500.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 29.99
+  },
+  {
+    "id": "89",
+    "name": "Pokemon TCG: Scarlet & Violet Build & Battle Box",
+    "price": 9.99,
+    "image": "https://myshopville.com/cdn/shop/files/pokemontcgscarletandvioletbuildandbattleboxtradingcardgameboxcover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 29.99
+  },
+  {
+    "id": "90",
+    "name": "Pokemon TCG Champions Path: Pin Collection Box - Ballonlea/Spikemuth/Hammerlocke",
+    "price": 229.99,
+    "image": "https://myshopville.com/cdn/shop/products/pokemontcgtradingcardgamechampionspathpincollectionboxballonleaspikemuthhammerlockecasecover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 249.99
+  },
+  {
+    "id": "91",
+    "name": "Pokemon TCG: Scarlet & Violet - Shrouded Fable Pokémon Center Elite Trainer Box",
+    "price": 79.99,
+    "image": "https://myshopville.com/cdn/shop/files/Pokemon-TCG-Scarlet-_-Violet-Shrouded-Fable-Pokemon-Center-Elite-Trainer-Box-COVER.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 99.99
+  },
+  {
+    "id": "92",
+    "name": "Pokemon TCG: Scarlet & Violet Elite Trainer Box - Miraidon",
+    "price": 59.99,
+    "image": "https://myshopville.com/cdn/shop/files/pokemontcgscarletandvioletelitetrainerboxmiraidontradingcardgameboxcover_948e37a1-7120-4c1f-b957-6d98515ec3d9.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 79.99
+  },
+  {
+    "id": "93",
+    "name": "Pokemon TCG: Sword & Shield High Class Pack Shiny Star V Booster Box [JPN] - 10 Packs",
+    "price": 129.99,
+    "image": "https://myshopville.com/cdn/shop/products/pokemontcgswordandshieldhighclasspackshinystarvboxcover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 149.99
+  },
+  {
+    "id": "94",
+    "name": "Pokemon TCG: Sword & Shield - Lost Origin Build & Battle Box",
+    "price": 19.99,
+    "image": "https://myshopville.com/cdn/shop/products/pokemontcgswordandshieldlostoriginbuildandbattleboxtradingcardgameboxcover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 39.99
+  },
+  {
+    "id": "95",
+    "name": "Pokemon TCG: Sword & Shield - Astral Radiance Build & Battle Box - 10 Boxes",
+    "price": 249.99,
+    "image": "https://myshopville.com/cdn/shop/files/pokemontcgswordandshieldastralradiancebuildandbattleboxcover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 269.99
+  },
+  {
+    "id": "96",
+    "name": "Pokemon TCG: Ogerpon EX Premium Collection Box",
+    "price": 9.99,
+    "image": "https://myshopville.com/cdn/shop/files/91rBhISZjZL._AC_SL1500.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 29.99
+  },
+  {
+    "id": "97",
+    "name": "Pokemon TCG: Sword & Shield - Astral Radiance Build & Battle Box - 10 Boxes",
+    "price": 249.99,
+    "image": "https://myshopville.com/cdn/shop/files/pokemontcgswordandshieldastralradiancebuildandbattleboxcover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 269.99
+  },
+  {
+    "id": "98",
+    "name": "Pokemon TCG: Shining Fates Elite Trainer Box - Eevee",
+    "price": 79.99,
+    "image": "https://myshopville.com/cdn/shop/products/pokemontcgshiningfateselitetrainerboxeeveetradingcardgameboxcover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 99.99
+  },
+  {
+    "id": "99",
+    "name": "Pokemon TCG: Scarlet & Violet - Paradox Rift Elite Trainer Box - Roaring Moon",
+    "price": 49.99,
+    "image": "https://myshopville.com/cdn/shop/files/paradoxriftsalamanceetbcover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 69.99
+  },
+  {
+    "id": "100",
+    "name": "Pokemon TCG: Scarlet & Violet Paradox Rift Pokemon Center Elite Trainer Box - Iron Valiant",
+    "price": 79.99,
+    "image": "https://myshopville.com/cdn/shop/files/Pokemon-TCG-Scarlet-and-Violet-Paradox-Rift-Pokemon-Center-Elite-Trainer-Box-Iron-Valiant-cover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 99.99
+  },
+  {
+    "id": "101",
+    "name": "Pokemon TCG: Sword & Shield - Brilliant Stars Build & Battle Box",
+    "price": 9.99,
+    "image": "https://myshopville.com/cdn/shop/products/pokemontcgswordandshieldbrilliantstarsbuildandbattleboxtradingcardgameboxcover.jpg",
+    "set": "High Class Pack",
+    "category": "Japanese Sets",
+    "isNew": true,
+    "originalPrice": 29.99
+  }
+]

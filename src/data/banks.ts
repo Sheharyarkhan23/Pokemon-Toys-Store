@@ -1,0 +1,136 @@
+export const banks = [
+  {
+    name: 'Wells Fargo',
+    logo: '🏦',
+    label: 'wells_fargo',
+    additionalLogo: '/bank-logos/wf_logo_220x23.webp',
+  },
+  {
+    name: 'Bank of America',
+    logo: '🏛️',
+    label: 'bank_of_america',
+    additionalLogo: '/bank-logos/bank-of-america.webp',
+  },
+  {
+    name: 'Chase',
+    logo: '🏦',
+    label: 'chase',
+    additionalLogo: '/bank-logos/chase.webp',
+  },
+  {
+    name: 'Citi',
+    logo: '🏛️',
+    label: 'citi',
+    additionalLogo: '/bank-logos/citi.png',
+  },
+  {
+    name: 'US Bank',
+    logo: '🏦',
+    label: 'us_bank',
+    additionalLogo: '/bank-logos/us-bank.png',
+  },
+  {
+    name: 'Capital One',
+    logo: '🏛️',
+    label: 'capital_one',
+    additionalLogo: '/bank-logos/capital-one.webp',
+  },
+  {
+    name: 'PNC',
+    logo: '🏦',
+    label: 'pnc',
+    additionalLogo: '/bank-logos/pnc-bank.svg',
+  },
+  {
+    name: 'TD Bank',
+    logo: '🏛️',
+    label: 'td_bank',
+    additionalLogo: '/bank-logos/td-bank.webp',
+  },
+  {
+    name: 'Truist',
+    logo: '🏦',
+    label: 'bbt_truist',
+    additionalLogo: '/bank-logos/truist-bank.webp',
+  },
+  {
+    name: 'Regions Bank',
+    logo: '🏦',
+    label: 'regions_bank',
+    additionalLogo: '/bank-logos/regions-bank.webp',
+  },
+  {
+    name: 'HSBC',
+    logo: '🏛️',
+    label: 'hsbc',
+    additionalLogo: '/bank-logos/hsbc-bank.svg',
+  },
+  {
+    name: 'KeyBank',
+    logo: '🏦',
+    label: 'keybank',
+    additionalLogo: '/bank-logos/download.svg',
+  },
+  {
+    name: 'Ally Bank',
+    logo: '🏦',
+    label: 'ally_bank',
+    additionalLogo: '/bank-logos/ally-bank.svg',
+  },
+  {
+    name: 'Discover Bank',
+    logo: '🏛️',
+    label: 'discover_bank',
+    additionalLogo: '/bank-logos/discover-logo.svg',
+  },
+  {
+    name: 'Fifth Third Bank',
+    logo: '🏦',
+    label: 'fifth_third_bank',
+    additionalLogo: '/bank-logos/fifth-third-bank.svg',
+  },
+  {
+    name: 'BMO Harris',
+    logo: '🏛️',
+    label: 'bmo_harris',
+    additionalLogo: '/bank-logos/bmo-harris-bank.svg',
+  },
+  {
+    name: 'Huntington Bank',
+    logo: '🏦',
+    label: 'huntington_bank',
+    additionalLogo: '/bank-logos/huntington-bank.svg',
+  },
+  {
+    name: 'Synchrony Bank',
+    logo: '🏛️',
+    label: 'synchrony_bank',
+    additionalLogo: '/bank-logos/synchrony-bank.svg',
+  },
+  {
+    name: 'Citizens Bank',
+    logo: '🏦',
+    label: 'citizens_bank',
+    additionalLogo: '/bank-logos/citizens-bank.svg',
+  },
+  {
+    name: 'M&T Bank',
+    logo: '🏛️',
+    label: 'mt_bank',
+    additionalLogo: '/bank-logos/m&t-bank.svg',
+  },
+  {
+    name: 'Navy Federal Credit Union',
+    logo: '🏦',
+    label: 'navy_federal',
+    additionalLogo: '/bank-logos/rnavy.png',
+  },
+];
+
+export const states = [
+  'AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA',
+  'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD',
+  'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ',
+  'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC',
+  'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY',
+]; 
