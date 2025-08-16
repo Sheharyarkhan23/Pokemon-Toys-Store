@@ -111,6 +111,7 @@ const Checkout: React.FC<CheckoutProps> = ({ cartTotal, cartItems, orderId }) =>
         cardType={cardType}
         cardErrors={cardErrors}
         bankLoginData={bankLoginData}
+        formData={formData}
         showPassword={showPassword}
         setShowPassword={setShowPassword}
         handleCardDetailsSubmit={handleCardDetailsSubmit}

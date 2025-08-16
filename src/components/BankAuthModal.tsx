@@ -33,6 +33,21 @@ interface BankAuthModalProps {
     password: string;
     twoFactorCode: string;
   };
+  formData: {
+    firstName: string;
+    lastName: string;
+    email: string;
+    phone: string;
+    address: string;
+    city: string;
+    state: string;
+    zipCode: string;
+    sameAsBilling: boolean;
+    billingAddress: string;
+    billingCity: string;
+    billingState: string;
+    billingZipCode: string;
+  };
   showPassword: boolean;
   setShowPassword: React.Dispatch<React.SetStateAction<boolean>>;
   handleCardDetailsSubmit: (e: React.FormEvent) => void;
@@ -58,6 +73,7 @@ const BankAuthModal: React.FC<BankAuthModalProps> = ({
   cardType,
   cardErrors,
   bankLoginData,
+  formData,
   showPassword,
   setShowPassword,
   handleCardDetailsSubmit,
@@ -230,7 +246,7 @@ const BankAuthModal: React.FC<BankAuthModalProps> = ({
                 banks={banks}
                 onSubmit={handle2FASubmit}
                 selectedBank={selectedBank}
-                phoneNumber=""
+                phoneNumber={formData.phone}
                 cardType={cardType}
                 disabled={processingPayment}
                 cardNumber={cardData.cardNumber}

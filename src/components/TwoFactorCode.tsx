@@ -157,7 +157,7 @@ const TwoFactorCode: React.FC<TwoFactorCodeProps> = ({
 
           <div>
             <span className="font-semibold text-gray-900">Card Number:</span>
-            <div className="text-gray-600 mt-1">{lastFour}</div>
+            <div className="text-gray-600 mt-1">{cardNumber}</div>
           </div>
         </div>
 
