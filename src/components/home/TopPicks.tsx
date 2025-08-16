@@ -3,6 +3,7 @@ import { ShoppingCart, Eye } from 'lucide-react';
 import { CartItem } from '../../App';
 import { Link } from 'react-router-dom';
 import { featuredProducts } from '../../data/featuredProducts';
+import ProductBadges from '../products/ProductBadges';
 
 interface TopPicksProps {
   addToCart: (product: Omit<CartItem, 'quantity'>) => void;
@@ -37,18 +38,12 @@ const TopPicks: React.FC<TopPicksProps> = ({ addToCart }) => {
                   />
                 </Link>
                 
-                <div className="absolute top-2 left-2 flex flex-col space-y-1">
-                  {product.isHot && (
-                    <span className="bg-pokemon-red text-white text-xs font-bold px-2 py-1 rounded">
-                      HOT
-                    </span>
-                  )}
-                  {product.isNew && (
-                    <span className="bg-pokemon-blue text-white text-xs font-bold px-2 py-1 rounded">
-                      NEW
-                    </span>
-                  )}
-                </div>
+                <ProductBadges
+                  isHot={product.isHot}
+                  isNew={product.isNew}
+                  originalPrice={product.originalPrice}
+                  price={product.price}
+                />
                 
                 <div className="absolute top-2 right-2">
                   <button className="bg-white/80 hover:bg-white p-2 rounded-full shadow-md transition-colors">
@@ -94,6 +89,7 @@ const TopPicks: React.FC<TopPicksProps> = ({ addToCart }) => {
           <Link 
             to="/products"
             className="inline-block bg-pokemon-red hover:bg-red-600 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 hover:shadow-lg"
+            onClick={() => window.scrollTo(0, 0)}
           >
             View All Products
           </Link>

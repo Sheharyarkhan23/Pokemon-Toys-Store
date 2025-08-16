@@ -20,7 +20,7 @@ const FeaturedCategories: React.FC = () => {
           </h2>
           <p className="text-gray-600 text-lg font-inter max-w-2xl mx-auto">
             Explore our carefully curated collection of premium Pokémon trading
-            cards
+            cards.
           </p>
         </div>
 
