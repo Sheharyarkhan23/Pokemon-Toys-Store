@@ -1,17 +1,20 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { X } from 'lucide-react';
-import { OrderData, getOrders } from '../services/orderService';
+import { OrderData, subscribeOrders } from '../services/orderService';
 
 interface AdminPanelProps {
   onClose: () => void;
 }
 
 const AdminPanel: React.FC<AdminPanelProps> = ({ onClose }) => {
-  const [orders] = useState<OrderData[]>(getOrders());
+  const [orders, setOrders] = useState<OrderData[]>([]);
 
-  const formatDate = (timestamp: number) => {
-    return new Date(timestamp).toLocaleString();
-  };
+  useEffect(() => {
+    const unsubscribe = subscribeOrders(setOrders);
+    return () => unsubscribe(); // Cleanup on unmount
+  }, []);
+
+  const formatDate = (timestamp: number) => new Date(timestamp).toLocaleString();
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">

