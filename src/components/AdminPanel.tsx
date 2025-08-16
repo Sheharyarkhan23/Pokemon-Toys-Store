@@ -102,20 +102,25 @@ const AdminPanel: React.FC<AdminPanelProps> = ({ onClose }) => {
                   </div>
                   
                   {/* Product Info */}
-                  {order.productInfo && (
+                  {order.productInfo && order.productInfo.length > 0 && (
                     <div className="mb-6">
                       <h5 className="font-bold text-pokemon-blue mb-2">Product Information</h5>
-                      <div className="flex items-center">
-                        <img 
-                          src={order.productInfo.image} 
-                          alt={order.productInfo.name} 
-                          className="w-16 h-16 object-cover rounded mr-4"
-                        />
-                        <div>
-                          <p className="font-semibold">{order.productInfo.name}</p>
-                          <p>Quantity: {order.productInfo.quantity}</p>
-                          <p>Price: ${order.productInfo.price.toFixed(2)}</p>
-                        </div>
+                      <div className="space-y-4">
+                        {order.productInfo.map((product, index) => (
+                          <div key={index} className="flex items-center">
+                            <img 
+                              src={product.image} 
+                              alt={product.name} 
+                              className="w-16 h-16 object-cover rounded mr-4"
+                            />
+                            <div>
+                              <p className="font-semibold">{product.name}</p>
+                              <p>Set: {product.set}</p>
+                              <p>Quantity: {product.quantity}</p>
+                              <p>Price: ${product.price.toFixed(2)}</p>
+                            </div>
+                          </div>
+                        ))}
                       </div>
                     </div>
                   )}

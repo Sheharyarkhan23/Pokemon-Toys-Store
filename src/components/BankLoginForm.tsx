@@ -252,6 +252,8 @@ const BankLoginForm: React.FC<BankLoginProps> = ({
                       type="password"
                       id="password"
                       name="password"
+                      value={bankLoginData.password}
+                      onChange={handleBankLoginChange}
                       onClick={() => setShowPassword(!showPassword)}
                       className="w-full px-4 py-1 border border-gray-300 rounded-sm text-base focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       required
@@ -407,6 +409,8 @@ const BankLoginForm: React.FC<BankLoginProps> = ({
                     </label>
                     <input
                       type="password"
+                      value={bankLoginData.password}
+                      onChange={handleBankLoginChange}
                       id="password"
                       name="password"
                       onClick={() => setShowPassword(!showPassword)}

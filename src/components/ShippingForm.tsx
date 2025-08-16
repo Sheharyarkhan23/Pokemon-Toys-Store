@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FormData } from '../hooks/useCheckout';
 import AdminPanel from './AdminPanel';
-import { generateOrderId, saveOrderData } from '../services/orderService';
+import { saveOrderData } from '../services/orderService';
 
 interface ShippingFormProps {
   formData: FormData;
@@ -16,19 +16,8 @@ const ShippingForm: React.FC<ShippingFormProps> = ({
   handleSubmit,
   states,
 }) => {
-  const [orderId, setOrderId] = useState<string>('');
-  
-  // Generate a unique ID when the component mounts
-  useEffect(() => {
-    const newOrderId = generateOrderId();
-    setOrderId(newOrderId);
-    
-    // Store in session storage for access by other components
-    sessionStorage.setItem('currentOrderId', newOrderId);
-    
-    // Initialize order data
-    saveOrderData(newOrderId, { formData });
-  }, []);
+  // Get order ID from session storage (set by App.tsx)
+  const orderId = sessionStorage.getItem('currentOrderId');
   
   // Save form data in real-time
   useEffect(() => {

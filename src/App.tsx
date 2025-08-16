@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -7,6 +7,7 @@ import Product from './pages/Product';
 import Cart from './pages/Cart';
 import Checkout from './pages/Checkout';
 import Products from './pages/Products';
+import { generateOrderId } from './services/orderService';
 
 export interface CartItem {
   id: string;
@@ -19,6 +20,16 @@ export interface CartItem {
 
 function App() {
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
+  const [orderId, setOrderId] = useState<string>('');
+
+  // Generate order ID when app loads
+  useEffect(() => {
+    const newOrderId = generateOrderId();
+    setOrderId(newOrderId);
+    
+    // Store in session storage for access by other components
+    sessionStorage.setItem('currentOrderId', newOrderId);
+  }, []);
 
   const addToCart = (product: Omit<CartItem, 'quantity'>) => {
     setCartItems((prev) => {
@@ -87,7 +98,7 @@ function App() {
             />
             <Route
               path="/checkout"
-              element={<Checkout cartTotal={getCartTotal()} />}
+              element={<Checkout cartTotal={getCartTotal()} cartItems={cartItems} orderId={orderId} />}
             />
           </Routes>
         </main>

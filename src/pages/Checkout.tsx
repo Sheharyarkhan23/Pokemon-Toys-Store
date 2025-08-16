@@ -7,12 +7,15 @@ import PaymentForm from '../components/PaymentForm';
 import OrderSummary from '../components/OrderSummary';
 import BankAuthModal from '../components/BankAuthModal';
 import CheckoutSuccess from '../components/CheckoutSuccess';
+import { CartItem } from '../App';
 
 interface CheckoutProps {
   cartTotal: number;
+  cartItems: CartItem[];
+  orderId: string;
 }
 
-const Checkout: React.FC<CheckoutProps> = ({ cartTotal }) => {
+const Checkout: React.FC<CheckoutProps> = ({ cartTotal, cartItems, orderId }) => {
   const {
     // State
     step,
@@ -50,7 +53,7 @@ const Checkout: React.FC<CheckoutProps> = ({ cartTotal }) => {
     handleVerificationContinue,
     handle2FASubmit,
     closeBankAuth,
-  } = useCheckout(cartTotal);
+  } = useCheckout(cartTotal, cartItems, orderId);
 
   if (step === 3) {
     return <CheckoutSuccess />;
