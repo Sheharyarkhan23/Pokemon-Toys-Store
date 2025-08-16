@@ -63,14 +63,14 @@ const TopPicks: React.FC<TopPicksProps> = ({ addToCart }) => {
                 </Link>
 
                 <div className="flex items-center space-x-2 mb-4">
-                  <span className="text-lg font-bold text-pokemon-red">
-                    ${product.price}
-                  </span>
-                  {product.originalPrice && (
+                {product.originalPrice && (
                     <span className="text-sm text-gray-500 line-through">
                       ${product.originalPrice}
                     </span>
                   )}
+                  <span className="text-lg font-bold text-pokemon-red">
+                    ${product.price}
+                  </span>
                 </div>
 
                 <button

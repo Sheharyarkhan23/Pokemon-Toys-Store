@@ -7,7 +7,7 @@ const testimonials = [
     name: 'Alex Chen',
     rating: 5,
     comment:
-      'Amazing service! Got my order fast and safely packed. Every card was in perfect condition.',
+      'Pokéboost Vault is my go-to for Pokémon cards. Every order arrives quickly and in pristine condition. Their selection is top-tier, and I\'ve never had a single issue. Highly recommended for serious collectors!.',
     avatar: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg',
   },
   {
@@ -15,7 +15,7 @@ const testimonials = [
     name: 'Sarah Johnson',
     rating: 5,
     comment:
-      "Best prices I've found online for Japanese exclusives. Customer service is top-notch!",
+      "I had a question about a rare card, and their team responded within hours with helpful advice. It is rare to find a store that treats you like a valued customer, not just a transaction.",
     avatar: 'https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg',
   },
   {
@@ -23,7 +23,7 @@ const testimonials = [
     name: 'Mike Rodriguez',
     rating: 5,
     comment:
-      'Been buying from PokeCards Pro for 2 years. Never disappointed with quality or delivery.',
+      'I ordered a vintage card for my nephews birthday, and it came beautifully packaged with a bonus sleeve. He was thrilled! Pokéboost Vault made me look like a hero.',
     avatar:
       'https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg',
   },
@@ -32,7 +32,7 @@ const testimonials = [
     name: 'Emma Davis',
     rating: 5,
     comment:
-      'Pre-orders are handled perfectly. Got my Scarlet & Violet box exactly on release day!',
+      'I\'ve bought from several online card stores, but Pokéboost Vault stands out. Their listings are accurate, prices fair, and delivery is always reliable. I trust them with my collection.',
     avatar:
       'https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg',
   },
@@ -41,7 +41,7 @@ const testimonials = [
     name: 'David Kim',
     rating: 5,
     comment:
-      'Excellent packaging and authentication. Trust this site completely for expensive cards.',
+      'Whether you\'re chasing rare holos or building a deck, Pokéboost Vault has it all. Their inventory is constantly updated, and I\'ve scored some amazing finds. It\'s like treasure hunting!',
     avatar: 'https://images.pexels.com/photos/432059/pexels-photo-432059.jpeg',
   },
 ];
@@ -78,8 +78,8 @@ const Testimonials: React.FC = () => {
             What Trainers Say
           </h2>
           <p className="text-gray-600 text-lg font-inter max-w-2xl mx-auto">
-            Join thousands of satisfied customers who trust PokeCards Pro for
-            their collection
+            Join thousands of satisfied customers who trust PokéBoost Vault for
+            their collection.
           </p>
         </div>
 
