@@ -24,12 +24,11 @@ const Footer: React.FC = () => {
                 <div className="w-6 h-6 bg-white rounded-full border-2 border-pokemon-dark"></div>
               </div>
               <span className="font-press-start text-pokemon-red text-sm">
-                PokeCards Pro
+              Pokéboost Vault
               </span>
             </div>
             <p className="text-gray-300 font-inter text-sm leading-relaxed mb-6">
-              Your trusted source for authentic Pokémon trading cards. From rare
-              Japanese exclusives to the latest releases.
+            Your trusted source for authentic Pokémon trading cards at unbeatable prices.
             </p>
             <div className="flex space-x-4">
               <a
@@ -77,32 +76,27 @@ const Footer: React.FC = () => {
                 <Link
                   to="/products"
                   className="text-gray-300 hover:text-white transition-colors"
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                 >
-                  All Products
+                  Products
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/pre-orders"
+                  to="/"
                   className="text-gray-300 hover:text-white transition-colors"
+                  onClick={() => window.scrollTo({ top: 4000, behavior: 'smooth' })}
                 >
-                  Pre-Orders
+                  About
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/japanese"
+                  to="/"
                   className="text-gray-300 hover:text-white transition-colors"
+                  onClick={() => window.scrollTo({ top: 2950, behavior: 'smooth' })}
                 >
-                  Japanese Cards
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/singles"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  Single Cards
+                  Contact
                 </Link>
               </li>
             </ul>
@@ -116,7 +110,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-3 font-inter text-sm">
               <li>
                 <Link
-                  to="/contact"
+                  to="/"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
                   Contact Us
@@ -124,7 +118,7 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <Link
-                  to="/shipping"
+                  to="/"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
                   Shipping Info
@@ -132,7 +126,7 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <Link
-                  to="/returns"
+                  to="/"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
                   Returns & Exchanges
@@ -140,7 +134,7 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <Link
-                  to="/faq"
+                  to="/"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
                   FAQ
@@ -148,7 +142,7 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <Link
-                  to="/authenticity"
+                  to="/"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
                   Authenticity Guarantee
@@ -245,23 +239,23 @@ const Footer: React.FC = () => {
         <div className="border-t border-gray-700 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-gray-400 font-inter text-sm">
-              © 2025 PokeCards Pro. All rights reserved.
+              © 2025 PokéBoost Vault. All rights reserved.
             </p>
             <div className="flex space-x-6">
               <Link
-                to="/privacy"
+                to="/"
                 className="text-gray-400 hover:text-white font-inter text-sm transition-colors"
               >
                 Privacy Policy
               </Link>
               <Link
-                to="/terms"
+                to="/"
                 className="text-gray-400 hover:text-white font-inter text-sm transition-colors"
               >
                 Terms of Service
               </Link>
               <Link
-                to="/cookies"
+                to="/"
                 className="text-gray-400 hover:text-white font-inter text-sm transition-colors"
               >
                 Cookie Policy

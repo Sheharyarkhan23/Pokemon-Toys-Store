@@ -76,7 +76,7 @@ const Newsletter: React.FC = () => {
                 Early Access
               </h4>
               <p className="font-inter text-sm opacity-90">
-                Get 24-hour early access to new releases and limited editions
+                Get 24-hour early access to new releases and limited editions.
               </p>
             </div>
             <div>
@@ -84,7 +84,7 @@ const Newsletter: React.FC = () => {
                 Exclusive Deals
               </h4>
               <p className="font-inter text-sm opacity-90">
-                Subscriber-only discounts up to 20% off retail prices
+                Subscriber-only discounts up to 20% off retail prices.
               </p>
             </div>
             <div>
@@ -92,7 +92,7 @@ const Newsletter: React.FC = () => {
                 Rare Alerts
               </h4>
               <p className="font-inter text-sm opacity-90">
-                Instant notifications when rare cards come back in stock
+                Instant notifications when rare cards come back in stock.
               </p>
             </div>
           </div>
