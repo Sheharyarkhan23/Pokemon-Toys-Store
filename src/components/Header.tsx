@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, Search, ShoppingCart } from 'lucide-react';
 
 interface HeaderProps {
@@ -9,24 +9,39 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ cartCount }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   const scrollToFooter = () => {
     if (location.pathname === '/') {
-      // Scroll to footer on home page
+      // Already on home page, scroll to footer
       const footer = document.querySelector('footer');
       if (footer) {
         footer.scrollIntoView({ behavior: 'smooth' });
       }
+    } else {
+      // Navigate to home page first, then scroll to footer
+      navigate('/');
+      setTimeout(() => {
+        const footer = document.querySelector('footer');
+        if (footer) {
+          footer.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
     }
   };
 
   const scrollToNewsletter = () => {
     if (location.pathname === '/') {
-      // Scroll to newsletter section on home page
-      const newsletter = document.querySelector(
-        '#newsletter1'
-      ) as HTMLElement | null;
+      // Already on home page, scroll to newsletter
+      const newsletter = document.querySelector('#newsletter1') as HTMLElement | null;
       newsletter?.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      // Navigate to home page first, then scroll to newsletter
+      navigate('/');
+      setTimeout(() => {
+        const newsletter = document.querySelector('#newsletter1') as HTMLElement | null;
+        newsletter?.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
     }
   };
 
@@ -36,7 +51,7 @@ const Header: React.FC<HeaderProps> = ({ cartCount }) => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <img src="/public/logo.svg" className="w-[167px] h-36" />
+            <img src="/logo.svg" className="w-[167px] h-36" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -54,19 +69,19 @@ const Header: React.FC<HeaderProps> = ({ cartCount }) => {
               Products
             </Link>
             <Link
-                              to="/"
-                              className="text-pokemon-dark hover:text-pokemon-red transition-colors"
-                              onClick={() => window.scrollTo({ top: 4000, behavior: 'smooth' })}
-                            >
-                              About
-                            </Link>
+              to="/"
+              className="text-pokemon-dark hover:text-pokemon-red transition-colors"
+              onClick={scrollToFooter}
+            >
+              About
+            </Link>
             <Link
-                              to="/"
-                              className="text-pokemon-dark hover:text-pokemon-red transition-colors"
-                              onClick={() => window.scrollTo({ top: 2870, behavior: 'smooth' })}
-                            >
-                              Contact
-                            </Link>
+              to="/"
+              className="text-pokemon-dark hover:text-pokemon-red transition-colors"
+              onClick={scrollToNewsletter}
+            >
+              Contact
+            </Link>
           </nav>
 
           {/* Search and Cart */}

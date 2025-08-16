@@ -28,7 +28,7 @@ const FeaturedCategories: React.FC = () => {
           {categories.map((category) => {
             const IconComponent = iconMap[category.icon as keyof typeof iconMap];
             return (
-              <Link key={category.id} to="/products">
+              <Link key={category.id} to="/products" onClick={() => window.scrollTo(0, 0)}>
                 <div className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 cursor-pointer">
                   <div
                     className="h-48 bg-cover bg-center relative"

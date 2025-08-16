@@ -30,7 +30,7 @@ const TopPicks: React.FC<TopPicksProps> = ({ addToCart }) => {
               className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 overflow-hidden group"
             >
               <div className="relative flex justify-center">
-                <Link to={`/product/${product.id}`}>
+                <Link to={`/product/${product.id}`} onClick={() => window.scrollTo(0, 0)}>
                   <img
                     src={product.image}
                     alt={product.name}
@@ -56,7 +56,7 @@ const TopPicks: React.FC<TopPicksProps> = ({ addToCart }) => {
                 <p className="text-xs text-pokemon-blue font-semibold mb-1">
                   {product.set}
                 </p>
-                <Link to={`/product/${product.id}`}>
+                <Link to={`/product/${product.id}`} onClick={() => window.scrollTo(0, 0)}>
                   <h3 className="font-semibold text-pokemon-dark mb-2 line-clamp-2">
                     {product.name}
                   </h3>
