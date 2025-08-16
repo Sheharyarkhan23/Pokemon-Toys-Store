@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const slides = [
   {
@@ -33,6 +34,12 @@ const slides = [
 
 const Hero: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const navigate = useNavigate();
+
+  const handleShopNowClick = () => {
+    navigate('/products');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -73,7 +80,10 @@ const Hero: React.FC = () => {
                   {slide.description}
                 </p>
                 <div className="flex justify-center">
-                  <button className="bg-pokemon-yellow hover:bg-yellow-400 text-pokemon-dark font-bold py-2 md:py-3 px-8 rounded-lg text-lg transition-all duration-300 hover:shadow-lg hover:scale-105 animate-glow">
+                  <button 
+                    onClick={handleShopNowClick}
+                    className="bg-pokemon-yellow hover:bg-yellow-400 text-pokemon-dark font-bold py-2 md:py-3 px-8 rounded-lg text-lg transition-all duration-300 hover:shadow-lg hover:scale-105 animate-glow"
+                  >
                     {slide.cta}
                   </button>
                 </div>

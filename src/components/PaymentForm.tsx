@@ -17,7 +17,7 @@ const PaymentForm: React.FC<PaymentFormProps> = ({
   return (
     <div className="bg-white rounded-xl shadow-lg p-6">
       <h2 className="text-xl font-bold text-pokemon-dark mb-6">
-        Step 2: Payment
+        Payment
       </h2>
 
       <div className="mb-6">
@@ -64,7 +64,7 @@ const PaymentForm: React.FC<PaymentFormProps> = ({
         className="w-full bg-pokemon-blue hover:bg-blue-600 disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 hover:shadow-lg flex items-center justify-center space-x-2"
       >
         <Lock className="w-5 h-5" />
-        <span>Proceed to Bank Login</span>
+        <span>Proceed to Payment</span>
       </button>
     </div>
   );

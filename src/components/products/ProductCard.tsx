@@ -23,7 +23,8 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, addToCart }) => {
   return (
     <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 overflow-hidden group">
       <div className="relative flex justify-center">
-        <Link to={`/product/${product.id}`}>
+        <Link to={`/product/${product.id}`} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+        
           <img
             src={product.image}
             alt={product.name}

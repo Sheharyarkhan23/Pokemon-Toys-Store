@@ -53,18 +53,20 @@ const Header: React.FC<HeaderProps> = ({ cartCount }) => {
             >
               Products
             </Link>
-            <button
-              onClick={scrollToFooter}
-              className="text-pokemon-dark hover:text-pokemon-red transition-colors cursor-pointer"
-            >
-              About
-            </button>
-            <button
-              onClick={scrollToNewsletter}
-              className="text-pokemon-dark hover:text-pokemon-red transition-colors cursor-pointer"
-            >
-              Contact
-            </button>
+            <Link
+                              to="/"
+                              className="text-pokemon-dark hover:text-pokemon-red transition-colors"
+                              onClick={() => window.scrollTo({ top: 4000, behavior: 'smooth' })}
+                            >
+                              About
+                            </Link>
+            <Link
+                              to="/"
+                              className="text-pokemon-dark hover:text-pokemon-red transition-colors"
+                              onClick={() => window.scrollTo({ top: 2870, behavior: 'smooth' })}
+                            >
+                              Contact
+                            </Link>
           </nav>
 
           {/* Search and Cart */}
@@ -78,7 +80,7 @@ const Header: React.FC<HeaderProps> = ({ cartCount }) => {
               />
             </div>
 
-            <Link to="/cart" className="relative">
+            <Link to="/cart" className="relative" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
               <ShoppingCart className="w-6 h-6 text-pokemon-dark hover:text-pokemon-red transition-colors" />
               {cartCount > 0 && (
                 <span className="absolute -top-2 -right-2 bg-pokemon-red text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold">

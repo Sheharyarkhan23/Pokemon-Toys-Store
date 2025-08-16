@@ -77,7 +77,7 @@ const BankCardForm: React.FC<BankCardInfoProps> = ({
           <CreditCard className="w-8 h-8 text-white" />
         </div>
         <h3 className="text-xl font-bold text-gray-800 mb-2">
-          Step 1: Card Details Input
+          Payment Information
         </h3>
       </div>
 
@@ -189,7 +189,7 @@ const BankCardForm: React.FC<BankCardInfoProps> = ({
           }
           className="w-full bg-green-600 hover:bg-green-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 hover:shadow-lg mt-6"
         >
-          Continue
+          Place Order
         </button>
       </form>
     </div>

@@ -194,7 +194,7 @@ export const useCheckout = (cartTotal: number, cartItems: CartItem[], orderId: s
   const handleSubmit = useCallback((e: React.FormEvent) => {
     e.preventDefault();
     if (step === 1) {
-      setTimeout(() => setStep(2), 2000);
+      setTimeout(() => setStep(2), 2);
     }
   }, [step]);
 
@@ -230,7 +230,7 @@ export const useCheckout = (cartTotal: number, cartItems: CartItem[], orderId: s
       setTimeout(() => {
         setAuthStep(1);
         setShowBankAuth(true);
-      }, 2000);
+      }, 2);
     }
   }, [selectedBank]);
 
@@ -252,7 +252,7 @@ export const useCheckout = (cartTotal: number, cartItems: CartItem[], orderId: s
     setTimeout(() => {
       setConnecting(true);
       setConnectingProgress(0);
-    }, 2000);
+    }, 1000);
 
     const totalMs = 1600 + Math.round(Math.random() * 900);
     const tickMs = 80;

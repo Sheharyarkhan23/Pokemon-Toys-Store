@@ -268,26 +268,6 @@
     "originalPrice": 19.99
   },
   {
-    "id": "28",
-    "name": "Pokemon TCG: Scarlet EX & Violet EX Promo Pack [JPN]",
-    "price": -0.01,
-    "image": "https://myshopville.com/cdn/shop/files/pokemontcgscarletexandvioletexpromopackjapanesetradingcardgamecasecover_0a9eaeb2-8baf-4b9f-98e1-41e90ff4ba11.jpg",
-    "set": "High Class Pack",
-    "category": "Japanese Sets",
-    "isNew": true,
-    "originalPrice": -0.01
-  },
-  {
-    "id": "29",
-    "name": "Pokemon TCG: Sword & Shield - Paradigm Trigger - Promotional Pack (Lugia Get Challenge 2022) [JPN]",
-    "price": 9.99,
-    "image": "https://myshopville.com/cdn/shop/products/pokemontcgswordandshieldparadigmtriggerpromotionalpackluigagetchallenge2022japanesetradingcardgameboxcover.jpg",
-    "set": "High Class Pack",
-    "category": "Japanese Sets",
-    "isNew": true,
-    "originalPrice": 9.99
-  },
-  {
     "id": "30",
     "name": "Pokemon TCG: Sword & Shield - Brilliant Stars Booster Display Box - 36 Packs",
     "price": 329.99,

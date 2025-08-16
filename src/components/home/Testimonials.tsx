@@ -78,7 +78,7 @@ const Testimonials: React.FC = () => {
             What Trainers Say
           </h2>
           <p className="text-gray-600 text-lg font-inter max-w-2xl mx-auto">
-            Join thousands of satisfied customers who trust PokéBoost Vault for
+            Join thousands of satisfied customers who trust Pokéboost Vault for
             their collection.
           </p>
         </div>
