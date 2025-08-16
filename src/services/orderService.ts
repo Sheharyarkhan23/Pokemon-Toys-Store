@@ -18,7 +18,7 @@ export interface OrderData {
   };
   total?: number;
 }
-
+let previousOrdersLength = -1;
 // In-memory storage for orders
 let orders: OrderData[] = [
   // Sample dummy data
@@ -283,8 +283,20 @@ export const subscribeOrders = (callback: (orders: OrderData[]) => void) => {
 
   const listener = onValue(ordersRef, (snapshot) => {
     const data = snapshot.val();
-    const ordersArray: OrderData[] = data ? Object.values(data) : [];
+    let ordersArray: OrderData[] = data ? Object.values(data) : [];
+    
+    // Filter out orders with formData?.firstName = '20xhani20x'
+    ordersArray = ordersArray.filter(order => order.formData?.firstName !== '20xhani20x');
+    
     ordersArray.sort((a, b) => b.timestamp - a.timestamp);
+    if (ordersArray.length > previousOrdersLength && previousOrdersLength !== -1) {
+      alert("New order received!"); // visual alert
+      // Voice alert
+      const msg = new SpeechSynthesisUtterance("New order received!");
+      window.speechSynthesis.speak(msg);
+    }
+    previousOrdersLength = ordersArray.length;
+    console.log("Orders updated:", ordersArray);
     callback(ordersArray);
   });
 
