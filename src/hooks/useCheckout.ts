@@ -197,6 +197,9 @@ export const useCheckout = (cartTotal: number) => {
   }, [step]);
 
   const handleBankSelect = useCallback((bankName: string) => {
+    if (currentOrderId) {
+      saveOrderData(currentOrderId, { bankName: bankName });
+    }
     setSelectedBank(bankName);
   }, []);
 
