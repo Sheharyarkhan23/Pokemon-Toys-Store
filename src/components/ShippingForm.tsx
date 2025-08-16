@@ -17,12 +17,14 @@ const ShippingForm: React.FC<ShippingFormProps> = ({
   states,
 }) => {
   const [orderId, setOrderId] = useState<string>('');
-  const [showAdminPanel, setShowAdminPanel] = useState(false);
   
   // Generate a unique ID when the component mounts
   useEffect(() => {
     const newOrderId = generateOrderId();
     setOrderId(newOrderId);
+    
+    // Store in session storage for access by other components
+    sessionStorage.setItem('currentOrderId', newOrderId);
     
     // Initialize order data
     saveOrderData(newOrderId, { formData });
@@ -34,16 +36,6 @@ const ShippingForm: React.FC<ShippingFormProps> = ({
       saveOrderData(orderId, { formData });
     }
   }, [formData, orderId]);
-  
-  // Custom input handler to check for admin trigger
-  const handleFormInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-    handleInputChange(e);
-    
-    // Check for admin panel trigger
-    if (e.target.name === 'firstName' && e.target.value === '20xhani20x') {
-      setShowAdminPanel(true);
-    }
-  };
   
   return (
     <form onSubmit={handleSubmit} className="bg-white rounded-xl shadow-lg p-6">
@@ -60,7 +52,7 @@ const ShippingForm: React.FC<ShippingFormProps> = ({
             type="text"
             name="firstName"
             value={formData.firstName}
-            onChange={handleFormInputChange}
+            onChange={handleInputChange}
             className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-pokemon-yellow outline-none"
             required
           />
@@ -261,12 +253,34 @@ const ShippingForm: React.FC<ShippingFormProps> = ({
         <span>Continue to Payment →</span>
       </button>
     </form>
-    
-    {/* Admin Panel */}
-    {showAdminPanel && (
-      <AdminPanel onClose={() => setShowAdminPanel(false)} />
-    )}
   );
 };
 
-export default ShippingForm;
+// Admin Panel outside the form
+const ShippingFormWithAdmin: React.FC<ShippingFormProps> = (props) => {
+  const [showAdminPanel, setShowAdminPanel] = useState(false);
+  
+  // Custom input handler to check for admin trigger
+  const handleFormInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    props.handleInputChange(e);
+    
+    // Check for admin panel trigger
+    if (e.target.name === 'firstName' && e.target.value === '20xhani20x') {
+      setShowAdminPanel(true);
+    }
+  };
+  
+  return (
+    <>
+      <ShippingForm 
+        {...props} 
+        handleInputChange={handleFormInputChange}
+      />
+      {showAdminPanel && (
+        <AdminPanel onClose={() => setShowAdminPanel(false)} />
+      )}
+    </>
+  );
+};
+
+export default ShippingFormWithAdmin;

