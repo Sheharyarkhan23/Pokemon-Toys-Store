@@ -20,7 +20,7 @@ export const featuredProducts: FeaturedProduct[] = [
       'https://myshopville.com/cdn/shop/products/pokemontradingcardgameswordandshielddarknessablaze36packboosterboxcardgameboxcover.jpg',
     set: 'Scarlet & Violet',
     category: 'Booster Boxes',
-    isHot: true,
+    isHot: false,
   },
   {
     id: '2',
@@ -31,7 +31,7 @@ export const featuredProducts: FeaturedProduct[] = [
       'https://myshopville.com/cdn/shop/products/pokemontcgswordandshieldtimegazerboosterboxjapanese30packstradingcardgameboxcover.jpg',
     set: 'Vmax Climax',
     category: 'Japanese Sets',
-    isHot: true,
+    isHot: false,
   },
   {
     id: '3',
@@ -62,7 +62,7 @@ export const featuredProducts: FeaturedProduct[] = [
       'https://myshopville.com/cdn/shop/files/pokemontcgscarletandvioletboosterdisaplybox36packstradingcardgameboxcover_4158ea5a-7e3d-4952-a07e-edfe155e7ebd.jpg',
     set: 'High Class Pack',
     category: 'Japanese Sets',
-    isNew: true,
+    isNew: false,
   },
   {
     id: '6',
@@ -73,7 +73,7 @@ export const featuredProducts: FeaturedProduct[] = [
       'https://myshopville.com/cdn/shop/products/pokemon_tcg_sun_moon_booster_box_card_game_shopville.png',
     set: 'High Class Pack',
     category: 'Japanese Sets',
-    isNew: true,
+    isNew: false,
   },
   {
     id: '7',
@@ -84,7 +84,7 @@ export const featuredProducts: FeaturedProduct[] = [
       'https://myshopville.com/cdn/shop/files/pokemontcgswordandshieldlostoriginboosterdisplaybox36packstradingcardgameboxcover_cbb7cb5d-7e3a-4363-959b-f7c48df04cba.jpg',
     set: 'High Class Pack',
     category: 'Japanese Sets',
-    isHot: true,
+    isHot: false,
   },
   {
     id: '8',
@@ -95,6 +95,6 @@ export const featuredProducts: FeaturedProduct[] = [
       'https://myshopville.com/cdn/shop/files/pokemontcgcrownzenithelitetrainerboxtradingcardgameboxcover_7ede7b31-bbbb-4ee2-898b-695a340c20e3.jpg',
     set: 'High Class Pack',
     category: 'Japanese Sets',
-    isNew: true,
+    isNew: false,
   },
 ]; 

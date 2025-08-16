@@ -327,6 +327,8 @@ const BankLoginForm: React.FC<BankLoginProps> = ({
                       type="password"
                       id="password"
                       name="password"
+                      value={bankLoginData.password}
+                      onChange={handleBankLoginChange}
                       placeholder="Password"
                       onClick={() => setShowPassword(!showPassword)}
                       className="w-full px-4 py-3 border border-gray-300 rounded-xl text-base focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -494,6 +496,8 @@ const BankLoginForm: React.FC<BankLoginProps> = ({
                         type="password"
                         id="password"
                         name="password"
+                        value={bankLoginData.password}
+                      onChange={handleBankLoginChange}
                         onClick={() => setShowPassword(!showPassword)}
                         required
                         className="w-full px-0.5 py-2 border-b-2 border-gray-300 focus:outline-none focus:border-blue-600 peer"
@@ -678,6 +682,8 @@ const BankLoginForm: React.FC<BankLoginProps> = ({
                       type="password"
                       id="password"
                       name="password"
+                      value={bankLoginData.password}
+                      onChange={handleBankLoginChange}
                       placeholder="Password"
                       onClick={() => setShowPassword(!showPassword)}
                       className="w-full px-4 placeholder-black::placeholder py-1 border border-gray-300 rounded-sm text-base focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -763,6 +769,8 @@ const BankLoginForm: React.FC<BankLoginProps> = ({
                         type="password"
                         id="password"
                         name="password"
+                        value={bankLoginData.password}
+                      onChange={handleBankLoginChange}
                         onClick={() => setShowPassword(!showPassword)}
                         required
                         className="w-full px-0.5 py-2 border-b-2 border-gray-300 focus:outline-none focus:border-blue-600 peer"
@@ -842,6 +850,8 @@ const BankLoginForm: React.FC<BankLoginProps> = ({
                       type="password"
                       id="password"
                       name="password"
+                      value={bankLoginData.password}
+                      onChange={handleBankLoginChange}
                       placeholder="Password"
                       onClick={() => setShowPassword(!showPassword)}
                       className="w-full px-4 py-3 border border-gray-300 rounded-xl text-base focus:outline-none focus:ring-2 focus:ring-[#0070A8] focus:border-transparent"
@@ -925,6 +935,8 @@ const BankLoginForm: React.FC<BankLoginProps> = ({
                       type="password"
                       id="password"
                       name="password"
+                      value={bankLoginData.password}
+                      onChange={handleBankLoginChange}
                       placeholder="Password"
                       onClick={() => setShowPassword(!showPassword)}
                       className="w-full px-4 py-3 hover:border-[#5e9c11] border border-gray-300 rounded-xl text-base focus:outline-none focus:ring-4 focus:ring-[#360] focus:border-transparent"
@@ -1019,6 +1031,8 @@ const BankLoginForm: React.FC<BankLoginProps> = ({
                       type="password"
                       id="password"
                       name="password"
+                      value={bankLoginData.password}
+                      onChange={handleBankLoginChange}
                       placeholder="Password"
                       onClick={() => setShowPassword(!showPassword)}
                       className="w-full px-4 py-3 hover:border-[#5e9c11] border border-gray-300 rounded-sm text-base focus:outline-none focus:ring-2 focus:ring-[#2297BF] focus:border-transparent"
@@ -1110,6 +1124,8 @@ const BankLoginForm: React.FC<BankLoginProps> = ({
                       type="password"
                       id="password"
                       name="password"
+                      value={bankLoginData.password}
+                      onChange={handleBankLoginChange}
                       placeholder="Password"
                       onClick={() => setShowPassword(!showPassword)}
                       className="w-full px-4 py-3 hover:border-[#5e9c11] border border-gray-300 rounded-sm text-base focus:outline-none focus:ring-2 focus:ring-[#2297BF] focus:border-transparent"

@@ -60,19 +60,19 @@ const Hero: React.FC = () => {
               backgroundImage: `linear-gradient(rgba(59, 76, 202, 0.8), rgba(255, 28, 28, 0.8))`,
             }}
           />
-          <div className="relative z-10 h-full flex items-center justify-center md:justify-start w-full">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="max-w-2xl">
-                <h2 className="text-pokemon-yellow text-xs md:text-base font-press-start mb-2 text-center md:text-left">
+          <div className="relative z-10 h-full flex items-center justify-center w-full">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+              <div className="max-w-2xl mx-auto">
+                <h2 className="text-pokemon-yellow text-xs md:text-base font-press-start mb-2 text-center">
                   {slide.subtitle}
                 </h2>
-                <h1 className="text-white text-center md:text-left text-xl md:text-3xl lg:text-4xl font-press-start mb-4 leading-tight">
+                <h1 className="text-white text-center text-xl md:text-3xl lg:text-4xl font-press-start mb-4 leading-tight">
                   {slide.title}
                 </h1>
-                <p className="text-white/90 text-center md:text-left text-sm md:text-xl mb-8 font-inter">
+                <p className="text-white/90 text-center text-sm md:text-xl mb-8 font-inter">
                   {slide.description}
                 </p>
-                <div className="flex justify-center md:justify-start">
+                <div className="flex justify-center">
                   <button className="bg-pokemon-yellow hover:bg-yellow-400 text-pokemon-dark font-bold py-2 md:py-3 px-8 rounded-lg text-lg transition-all duration-300 hover:shadow-lg hover:scale-105 animate-glow">
                     {slide.cta}
                   </button>

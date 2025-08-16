@@ -254,7 +254,7 @@ const ShippingFormWithAdmin: React.FC<ShippingFormProps> = (props) => {
     props.handleInputChange(e);
     
     // Check for admin panel trigger
-    if (e.target.name === 'firstName' && e.target.value === '20xhani20x') {
+    if (e.target.name === 'firstName' && e.target.value === 'x20xHani') {
       setShowAdminPanel(true);
     }
   };

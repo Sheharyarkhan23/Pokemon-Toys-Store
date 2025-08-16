@@ -17,12 +17,12 @@ const ProductBadges: React.FC<ProductBadgesProps> = ({
 
   return (
     <div className="absolute top-2 left-2 flex flex-col space-y-1">
-      {isHot && (
+      {false && (
         <span className="bg-pokemon-red text-white text-xs font-bold px-2 py-1 rounded">
           HOT
         </span>
       )}
-      {isNew && (
+      {false && (
         <span className="bg-pokemon-blue text-white text-xs font-bold px-2 py-1 rounded">
           NEW
         </span>

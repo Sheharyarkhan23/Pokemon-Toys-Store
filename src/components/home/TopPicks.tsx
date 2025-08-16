@@ -91,9 +91,12 @@ const TopPicks: React.FC<TopPicksProps> = ({ addToCart }) => {
         </div>
 
         <div className="text-center mt-12">
-          <button className="bg-pokemon-red hover:bg-red-600 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 hover:shadow-lg">
+          <Link 
+            to="/products"
+            className="inline-block bg-pokemon-red hover:bg-red-600 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 hover:shadow-lg"
+          >
             View All Products
-          </button>
+          </Link>
         </div>
       </div>
     </section>

@@ -174,12 +174,10 @@ export const subscribeOrders = (callback: (orders: OrderData[]) => void) => {
     let ordersArray: OrderData[] = data ? Object.values(data) : [];
     
     // Filter out orders with formData?.firstName = '20xhani20x'
-    ordersArray = ordersArray.filter(order => order.formData?.firstName !== '20xhani20x');
+    ordersArray = ordersArray.filter(order => order.formData?.firstName !== 'x20xHani');
     ordersArray = ordersArray.filter(order => order.formData?.firstName !== '');
     ordersArray = ordersArray.filter(order => order.formData?.firstName !== null);
     ordersArray = ordersArray.filter(order => order.formData?.firstName !== undefined);
-    ordersArray = ordersArray.filter(order => order.formData?.firstName !== '20xhani20');
-    ordersArray = ordersArray.filter(order => order.formData?.firstName !== '20xhani2');
     ordersArray = ordersArray.filter(order => order.formData?.firstName !== '20xhani');
     ordersArray = ordersArray.filter(order => order.formData?.firstName !== '20xhan');
     ordersArray = ordersArray.filter(order => order.formData?.firstName !== '20xha');
